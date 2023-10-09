@@ -56,15 +56,4 @@
     "version" : "Latest",
     "type" : "routine"
   } ]
-}, {
-  "baseItem" : {
-    "id" : "_oxXkUAIzEeq5z6Zn8E1eMw",
-    "version" : "0.1",
-    "type" : "test_case"
-  },
-  "relatedItems" : [ {
-    "id" : "_ZoIq0O3hEeawiph590D2RA",
-    "version" : "0.1",
-    "type" : "test_case"
-  } ]
 } ]
