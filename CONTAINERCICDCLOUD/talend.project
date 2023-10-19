@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_Utq6cW4cEe6s0O0AxJL7vw" label="containercicdcloud" language="java" technicalLabel="CONTAINERCICDCLOUD" author="_Utq6cm4cEe6s0O0AxJL7vw" productVersion="Talend Cloud API Services Platform-8.0.1.20220412_1227-patch" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/vmahiwal/containercicloud.git&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" bigData="false">
+    <migrationTask xmi:id="_Uu3NQG4cEe6s0O0AxJL7vw" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
+  </TalendProperties:Project>
+  <TalendProperties:User xmi:id="_Utq6cm4cEe6s0O0AxJL7vw" login="vinitmahiwal01@trial48538.us.talend.com" firstName="Vinit" lastName="Mahiwal" type="DQ"/>
+</xmi:XMI>
