@@ -1,0 +1,1412 @@
+###Success
+
+Started by user jAdmin
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend
+[Pipeline] {
+[Pipeline] echo
+Maven settings: maven_settings
+[Pipeline] configFileProvider
+provisioning config files...
+copy managed file [GroovyConfig] to file:/C:/ProgramData/Jenkins/.jenkins/workspace/SimpleTalend/jenkins_talend_helper.groovy
+[Pipeline] {
+[Pipeline] load
+[Pipeline] { (jenkins_talend_helper.groovy)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+[Pipeline] // configFileProvider
+[Pipeline] configFileProvider
+provisioning config files...
+copy managed file [MyCustom] to file:/C:/ProgramData/Jenkins/.jenkins/workspace/SimpleTalend/license
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // configFileProvider
+[Pipeline] echo
+
+CI_BUILDER_VERSION: 8.0.4
+PROJECT_TO_BUILD: CONTAINERCICDCLOUD
+JOBS_TO_BUILD: jobs/process/test_0.1
+GIT_PROJECT_LIST: CONTAINERCICDCLOUD;https://github.com/vmahiwal/containercicloud;main
+GIT_CREDENTIALS_ID: git_talend
+TALEND_CI_INSTALL_CONFIG: 
+TALEND_CI_RUN_CONFIG:  -Dlicense.path=license
+ -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base
+ -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest
+ -Dorg.slf4j.simpleLogger.showDateTime=true
+ -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS
+TALEND_CI_BUILD_OPTIONS: -Dtalend.job.applyContextToChildren=true
+MVN_GOALS: clean package
+MVN_EXTRA_PARAMS: 
+M2_HOME: null
+mavenToUse: M3
+maven_settings: maven_settings
+[Pipeline] stage
+[Pipeline] { (Initialize)
+[Pipeline] echo
+Checkout project - CONTAINERCICDCLOUD begin 
+Git URL: https://github.com/vmahiwal/containercicloud
+Git branch: main
+[Pipeline] echo
+Remove project Folder ./CONTAINERCICDCLOUD
+[Pipeline] dir
+Running in C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD
+[Pipeline] {
+[Pipeline] deleteDir
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] dir
+Running in C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\.repositories\CONTAINERCICDCLOUD
+[Pipeline] {
+[Pipeline] git
+The recommended git tool is: NONE
+using credential git_talend
+Fetching changes from the remote Git repository
+ > JGit fetch # timeout=10
+Checking out Revision a9e7b8e76c01150be623b702f74a630b01f54638 (refs/remotes/origin/main)
+Commit message: "User 'vinitmahiwal01@trial48538.us.talend.com' at 02:04:41 GMT 2023-10-19 :  save process : test   Save process item 'test' at path '' in project 'containercicdcloud'"
+[Pipeline] isUnix
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\.repositories\CONTAINERCICDCLOUD>xcopy CONTAINERCICDCLOUD ..\..\CONTAINERCICDCLOUD\ /E /H /Y 
+CONTAINERCICDCLOUD\.gitignore
+CONTAINERCICDCLOUD\.project
+CONTAINERCICDCLOUD\recycle_bin.index
+CONTAINERCICDCLOUD\talend.project
+CONTAINERCICDCLOUD\.settings\migration_task.index
+CONTAINERCICDCLOUD\.settings\org.talend.core.tis.prefs
+CONTAINERCICDCLOUD\.settings\org.talend.designer.maven.prefs
+CONTAINERCICDCLOUD\.settings\org.talend.log4j.prefs
+CONTAINERCICDCLOUD\.settings\org.talend.repository.prefs
+CONTAINERCICDCLOUD\.settings\project.settings
+CONTAINERCICDCLOUD\.settings\relationship.index
+CONTAINERCICDCLOUD\.settings\requiredFeatures.json
+CONTAINERCICDCLOUD\.settings\links\_oxXkUAIzEeq5z6Zn8E1eMw.link
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Access.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_AmazonAurora.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_AS400.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_BigQuery.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Cassandra.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Cassandra22_datastax.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Cassandra40.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Cassandra_datastax.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Databricks_Delta_Lake.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_dynamodb.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_ebcdic.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Exasol.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Firebird.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Greenplum.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_H2.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Hive.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_HSQLDB.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_IBMDB2.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Impala.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Informix.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_JavaDB.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_MaxDB.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_MicrosoftCrm.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_MicrosoftCrm_odata.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_MsOdbc.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_MSSQL.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Mysql.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Netezza.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Oracle.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Postgres.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_PostgresPlus.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Redshift.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_sap.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_SAPHana.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_SingleStore.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Snowflake.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_SQLite.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Sybase.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Teradata.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_validate.xsd
+CONTAINERCICDCLOUD\.settings\mappings\mapping_Vertica.xml
+CONTAINERCICDCLOUD\.settings\mappings\mapping_XSD.xml
+CONTAINERCICDCLOUD\code\.gitkeep
+CONTAINERCICDCLOUD\code\beans\.gitkeep
+CONTAINERCICDCLOUD\code\beansjar\.gitkeep
+CONTAINERCICDCLOUD\code\routines\.gitkeep
+CONTAINERCICDCLOUD\code\routines\system\.gitkeep
+CONTAINERCICDCLOUD\code\routines\system\DataOperation_0.1.item
+CONTAINERCICDCLOUD\code\routines\system\DataOperation_0.1.properties
+CONTAINERCICDCLOUD\code\routines\system\Mathematical_0.1.item
+CONTAINERCICDCLOUD\code\routines\system\Mathematical_0.1.properties
+CONTAINERCICDCLOUD\code\routines\system\Numeric_0.1.item
+CONTAINERCICDCLOUD\code\routines\system\Numeric_0.1.properties
+CONTAINERCICDCLOUD\code\routines\system\Relational_0.1.item
+CONTAINERCICDCLOUD\code\routines\system\Relational_0.1.properties
+CONTAINERCICDCLOUD\code\routines\system\SQLike_0.1.item
+CONTAINERCICDCLOUD\code\routines\system\SQLike_0.1.properties
+CONTAINERCICDCLOUD\code\routines\system\StringHandling_0.1.item
+CONTAINERCICDCLOUD\code\routines\system\StringHandling_0.1.properties
+CONTAINERCICDCLOUD\code\routines\system\TalendDataGenerator_0.1.item
+CONTAINERCICDCLOUD\code\routines\system\TalendDataGenerator_0.1.properties
+CONTAINERCICDCLOUD\code\routines\system\TalendDate_0.1.item
+CONTAINERCICDCLOUD\code\routines\system\TalendDate_0.1.properties
+CONTAINERCICDCLOUD\code\routines\system\TalendStringUtil_0.1.item
+CONTAINERCICDCLOUD\code\routines\system\TalendStringUtil_0.1.properties
+CONTAINERCICDCLOUD\code\routines\system\TalendString_0.1.item
+CONTAINERCICDCLOUD\code\routines\system\TalendString_0.1.properties
+CONTAINERCICDCLOUD\code\routinesjar\.gitkeep
+CONTAINERCICDCLOUD\code\snippets\.gitkeep
+CONTAINERCICDCLOUD\components\.gitkeep
+CONTAINERCICDCLOUD\context\.gitkeep
+CONTAINERCICDCLOUD\documentations\.gitkeep
+CONTAINERCICDCLOUD\documentations\generated\.gitkeep
+CONTAINERCICDCLOUD\documentations\generated\joblets\.gitkeep
+CONTAINERCICDCLOUD\documentations\generated\jobs\.gitkeep
+CONTAINERCICDCLOUD\images\.gitkeep
+CONTAINERCICDCLOUD\images\joblet_outlines\.gitkeep
+CONTAINERCICDCLOUD\images\job_outlines\.gitkeep
+CONTAINERCICDCLOUD\joblets\.gitkeep
+CONTAINERCICDCLOUD\metadata\.gitkeep
+CONTAINERCICDCLOUD\metadata\BRMSconnections\.gitkeep
+CONTAINERCICDCLOUD\metadata\connections\.gitkeep
+CONTAINERCICDCLOUD\metadata\fileDelimited\.gitkeep
+CONTAINERCICDCLOUD\metadata\fileExcel\.gitkeep
+CONTAINERCICDCLOUD\metadata\fileLdif\.gitkeep
+CONTAINERCICDCLOUD\metadata\filePositional\.gitkeep
+CONTAINERCICDCLOUD\metadata\fileRegex\.gitkeep
+CONTAINERCICDCLOUD\metadata\fileXml\.gitkeep
+CONTAINERCICDCLOUD\metadata\FTPconnections\.gitkeep
+CONTAINERCICDCLOUD\metadata\genericSchema\.gitkeep
+CONTAINERCICDCLOUD\metadata\header_footer\.gitkeep
+CONTAINERCICDCLOUD\metadata\JDBC\.gitkeep
+CONTAINERCICDCLOUD\metadata\json\.gitkeep
+CONTAINERCICDCLOUD\metadata\LDAPSchema\.gitkeep
+CONTAINERCICDCLOUD\metadata\rules\.gitkeep
+CONTAINERCICDCLOUD\metadata\SalesforceSchema\.gitkeep
+CONTAINERCICDCLOUD\metadata\tacokit\.gitkeep
+CONTAINERCICDCLOUD\metadata\WSDLSchema\.gitkeep
+CONTAINERCICDCLOUD\process\.gitkeep
+CONTAINERCICDCLOUD\process\JoinDataDB_0.1.item
+CONTAINERCICDCLOUD\process\JoinDataDB_0.1.properties
+CONTAINERCICDCLOUD\process\JoinDataDB_0.1.screenshot
+CONTAINERCICDCLOUD\process\test_0.1.item
+CONTAINERCICDCLOUD\process\test_0.1.properties
+CONTAINERCICDCLOUD\process\test_0.1.screenshot
+CONTAINERCICDCLOUD\routes\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeAggregate_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeAggregate_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeCreateDeltaTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeCreateDeltaTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeCreateTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeCreateTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeDropTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeDropTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeFilterColumns_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeFilterColumns_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeFilterRows_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeFilterRows_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeMerge_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\system\DeltaLakeMerge_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\DeltaLake\UserDefined\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Generic\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\Aggregate_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\Aggregate_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\Commit_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\Commit_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\DropSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\DropSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\DropTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\DropTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\FilterColumns_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\FilterColumns_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\FilterRow_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\FilterRow_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\MergeInsert_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\MergeInsert_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\MergeUpdate_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\MergeUpdate_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\Rollback_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Generic\system\Rollback_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Generic\UserDefined\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Hive\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveAggregate_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveAggregate_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveCreateSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveCreateSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveCreateTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveCreateTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveDropSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveDropSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveDropTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveDropTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveFilterColumns_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveFilterColumns_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveFilterRow_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Hive\system\HiveFilterRow_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Hive\UserDefined\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLAggregate_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLAggregate_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLCreateSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLCreateSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLCreateTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLCreateTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLDropSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLDropSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLDropTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLDropTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLFilterColumns_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLFilterColumns_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLFilterRow_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\system\MySQLFilterRow_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\MySQL\UserDefined\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaAggregate_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaAggregate_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaCreateSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaCreateSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaCreateTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaCreateTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaDropSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaDropSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaDropTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaDropTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaFilterColumns_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaFilterColumns_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaFilterRow_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\system\NetezzaFilterRow_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Netezza\UserDefined\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleAggregate_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleAggregate_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleCreateSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleCreateSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleCreateTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleCreateTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleDropSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleDropSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleDropTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleDropTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleFilterColumns_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleFilterColumns_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleFilterRow_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleFilterRow_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleMerge_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\system\OracleMerge_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Oracle\UserDefined\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelAggregate_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelAggregate_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelCommit_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelCommit_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelDropSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelDropSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelDropTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelDropTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelFilterColumns_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelFilterColumns_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelFilterRow_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelFilterRow_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelRollback_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\system\ParAccelRollback_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\ParAccel\UserDefined\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\system\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\system\SnowflakeCreateSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\system\SnowflakeCreateSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\system\SnowflakeCreateTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\system\SnowflakeCreateTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\system\SnowflakeDropSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\system\SnowflakeDropSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\system\SnowflakeDropTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\system\SnowflakeDropTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\system\SnowflakeMerge_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\system\SnowflakeMerge_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Snowflake\UserDefined\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataAggregate_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataAggregate_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataColumnList_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataColumnList_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataCreateSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataCreateSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataCreateTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataCreateTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataDropSourceTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataDropSourceTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataDropTargetTable_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataDropTargetTable_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataFilterColumns_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataFilterColumns_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataFilterRow_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataFilterRow_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataTableList_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\system\TeradataTableList_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Teradata\UserDefined\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Vertica\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Vertica\system\.gitkeep
+CONTAINERCICDCLOUD\sqlPatterns\Vertica\system\VerticaMergeInsert_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Vertica\system\VerticaMergeInsert_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Vertica\system\VerticaMergeUpdate_0.1.item
+CONTAINERCICDCLOUD\sqlPatterns\Vertica\system\VerticaMergeUpdate_0.1.properties
+CONTAINERCICDCLOUD\sqlPatterns\Vertica\UserDefined\.gitkeep
+CONTAINERCICDCLOUD\tests\.gitkeep
+CONTAINERCICDCLOUD\tests\process\_ZoIq0O3hEeawiph590D2RA\TestCase_tSort_0.1.item
+CONTAINERCICDCLOUD\tests\process\_ZoIq0O3hEeawiph590D2RA\TestCase_tSort_0.1.properties
+CONTAINERCICDCLOUD\tests\process\_ZoIq0O3hEeawiph590D2RA\TestCase_tSort_0.1.screenshot
+290 File(s) copied
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] echo
+Checkout project - CONTAINERCICDCLOUD done
+[Pipeline] tool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Generate POMS)
+[Pipeline] echo
+generateAllPoms - begin
+[Pipeline] withMaven
+[withMaven] Options: []
+[withMaven] Available options: 
+[withMaven] using JDK installation provided by the build agent
+[withMaven] using Maven installation 'M3'
+[Pipeline] {
+[Pipeline] isUnix
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend>echo C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3 
+C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3
+[Pipeline] isUnix
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend>mvn --batch-mode org.talend.ci:builder-maven-plugin:8.0.4:generateAllPoms  
+----- withMaven Wrapper script -----
+Picked up JAVA_TOOL_OPTIONS: -Dmaven.ext.class.path="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMavenbed4e652\pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMavenbed4e652" 
+Apache Maven 3.9.5 (57804ffe001d7215b5e7bcb531cf83df38f93546)
+Maven home: C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3
+Java version: 11.0.14, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-11.0.14
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows server 2016", version: "10.0", arch: "amd64", family: "windows"
+02:15:40,212 [INFO] [jenkins-event-spy] Generate C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMavenbed4e652\maven-spy-20231019-021540-1191185857657207665481.log.tmp ...
+02:15:40,495 [INFO] Scanning for projects...
+02:15:40,711 [INFO] 
+02:15:40,711 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+02:15:40,711 [INFO] Building Maven Stub Project (No POM) 1
+02:15:40,711 [INFO] --------------------------------[ pom ]---------------------------------
+02:15:40,726 [INFO] 
+02:15:40,726 [INFO] --- builder:8.0.4:generateAllPoms (default-cli) @ standalone-pom ---
+02:15:41,166 [INFO] commandlineWorkspace: C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend
+02:15:41,166 [INFO] *****************************************************
+02:15:41,166 [INFO] List projects from:C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend
+02:15:41,169 [INFO]   Not valid folder (no talend project) in:.JETEmitters
+02:15:41,169 [INFO]   Not valid folder (no talend project) in:.metadata
+02:15:41,170 [INFO]   Not valid folder (no talend project) in:.repositories
+02:15:41,170 [INFO]   Found project:CONTAINERCICDCLOUD
+02:15:41,170 [INFO]   Not valid folder (no talend project) in:report
+02:15:41,174 [INFO] 
+02:15:41,174 [INFO] Generate Order:
+02:15:41,174 [INFO] 
+02:15:41,174 [INFO]   |--CONTAINERCICDCLOUD
+02:15:41,194 [INFO] 
+02:15:41,194 [INFO] Resolve patches...
+02:15:41,194 [INFO] talend.studio.p2.update: https://update.talend.com/Studio/8/updates/latest
+02:15:43,026 [INFO] 
+02:15:43,026 [INFO] -----------------------------------------------------
+02:15:43,026 [INFO] Start to install Commandline...
+02:15:43,026 [INFO] 
+02:15:43,026 [INFO] Found existing installation, skipping...
+02:15:43,027 [INFO] 
+02:15:43,028 [INFO] Resolve license...
+02:15:43,030 [INFO] 
+02:15:43,030 [INFO] Commandline installation finished.
+02:15:43,030 [INFO] -----------------------------------------------------
+02:15:43,030 [INFO] 
+02:15:43,030 [INFO] Skipping upgrade on existing installation...
+02:15:43,078 [INFO] 
+02:15:43,078 [INFO] Creating the detected projects for Commandline workspace.
+02:15:43,080 [INFO]  Created project (base on existing folder): CONTAINERCICDCLOUD
+02:15:43,104 [INFO] 
+02:15:43,105 [INFO] Exec java -ea -Xms512m -Dfile.encoding=UTF-8 -Xmx2000m -XX:+CMSClassUnloadingEnabled -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication -Dmaven.local.repository=C:\Windows\system32\config\systemprofile\.m2\repository -Dci.mode=true -Dtalend.ci.generate.pom=true -Dmaven.repository=global -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest -classpath C:\Windows\system32\config\systemprofile\.installation\.commandline_8\plugins\org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar org.eclipse.core.launcher.Main -application org.talend.commandline.CommandLine -consolelog -data C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend scriptFile script_command_11098589247781240932.txt
+02:15:43,106 [INFO] loadScript, loaded temp command script file: C:\Windows\TEMP\script_command_11098589247781240932.txt
+02:15:43,145 [ERROR] Picked up JAVA_TOOL_OPTIONS: -Dmaven.ext.class.path="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMavenbed4e652\pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMavenbed4e652" 
+02:15:56,729 [INFO] !SESSION 2023-10-19 02:15:43.456 -----------------------------------------------
+02:15:56,730 [INFO] eclipse.buildId=unknown
+02:15:56,730 [INFO] java.version=11.0.14
+02:15:56,730 [INFO] java.vendor=Oracle Corporation
+02:15:56,730 [INFO] BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+02:15:56,731 [INFO] Framework arguments:  -application org.talend.commandline.CommandLine scriptFile script_command_11098589247781240932.txt
+02:15:56,731 [INFO] Command-line arguments:  -application org.talend.commandline.CommandLine -consolelog -data C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend scriptFile script_command_11098589247781240932.txt
+02:15:56,731 [INFO] 
+02:15:56,731 [INFO] !ENTRY org.eclipse.emf.ecore 2 0 2023-10-19 02:15:56.729
+02:15:56,731 [INFO] !MESSAGE Both 'org.talend.designer.unitemap' and 'org.talend.designer.unitemap' register a package for 'http://www.talend.org/unitemap'
+02:15:56,735 [INFO] 
+02:15:56,736 [INFO] !ENTRY org.eclipse.emf.ecore 2 0 2023-10-19 02:15:56.735
+02:15:56,736 [INFO] !MESSAGE Both 'org.talend.model' and 'org.talend.model' register a package for 'http://www.talend.org/component_cache'
+02:15:58,323 [INFO] 
+02:15:58,325 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:15:58.323
+02:15:58,325 [INFO] !MESSAGE 2023-10-19 02:15:58,318 INFO  org.talend.commandline.CommandLineApplication  - 
+02:15:58,325 [INFO] !!------------------------------------------------------------------------------!!
+02:15:58,325 [INFO] !!                                                                              !!
+02:15:58,328 [INFO] !!                                    TALEND                                    !!
+02:15:58,329 [INFO] !!   Starting Talend's platform log system.VERSION= 8.0.1.20230913_0925-patch   !!
+02:15:58,329 [INFO] !!                                                                              !!
+02:15:58,329 [INFO] !!------------------------------------------------------------------------------!!
+02:15:58,329 [INFO] 
+02:15:58,336 [INFO] 
+02:15:58,339 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:15:58.338
+02:15:58,339 [INFO] !MESSAGE Starting up Command Line Application
+02:15:58,342 [INFO] 
+02:15:58,343 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:15:58.342
+02:15:58,343 [INFO] !MESSAGE 2023-10-19 02:15:58,341 INFO  org.talend.utils.StudioKeysFileCheck  - encryptionKeyFilePath: C:\Windows\System32\config\systemprofile\.installation\.commandline_8\configuration\studio.keys
+02:15:58,343 [INFO] 
+02:16:01,260 [INFO] 
+02:16:01,260 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:16:01.199
+02:16:01,260 [INFO] !MESSAGE 2023-10-19 02:16:01,198 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Studio base p2 url is overwrited by: -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base
+02:16:01,260 [INFO] 
+02:16:01,260 [INFO] 
+02:16:01,260 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:16:01.200
+02:16:01,260 [INFO] !MESSAGE 2023-10-19 02:16:01,199 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Studio update p2 url is overwriten by parameter -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest
+02:16:01,260 [INFO] 
+02:16:01,406 [INFO] 
+02:16:01,407 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:16:01.407
+02:16:01,410 [INFO] !MESSAGE 2023-10-19 02:16:01,405 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Force profile OS check: -Dtalend.studio.p2.profileOS.check=true
+02:16:01,410 [INFO] 
+02:16:02,907 [INFO] 
+02:16:02,907 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:16:02.906
+02:16:02,908 [INFO] !MESSAGE Checking for update...
+02:16:20,508 [INFO] 
+02:16:20,509 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:16:20.508
+02:16:20,509 [INFO] !MESSAGE Commandline is update to date.
+02:16:20,516 [INFO] Start to check local patches....
+02:16:20,936 [INFO] 
+02:16:20,937 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:16:20.936
+02:16:20,939 [INFO] !MESSAGE 2023-10-19 02:16:20,935 INFO  org.talend.datacleansing.core.CleansingActivator  - Starting Talend Data Profiler platform.
+02:16:20,939 [INFO] 
+02:16:20,973 [INFO] 
+02:16:20,974 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:16:20.972
+02:16:20,974 [INFO] !MESSAGE 2023-10-19 02:16:20,971 WARN  org.talend.resource.ResourceManager  - The project can not get it from Project manager so that use default one
+02:16:20,974 [INFO] 
+02:16:20,977 [INFO] 
+02:16:20,978 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:16:20.978
+02:16:20,978 [INFO] !MESSAGE 2023-10-19 02:16:20,976 WARN  org.talend.resource.ResourceManager  - The project can not get it from Project manager so that use default one
+02:16:20,979 [INFO] 
+02:16:22,155 [INFO] COMPLETED at Thu Oct 19 02:16:22 GMT 2023
+02:16:22,155 [INFO] 
+02:16:22,155 [INFO] 
+02:16:22,156 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:16:22.155
+02:16:22,156 [INFO] !MESSAGE initLocal
+02:16:22,157 [INFO] 
+02:16:22,157 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:16:22.157
+02:16:22,157 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:16:22 GMT 2023
+02:16:22,157 [INFO] 
+02:16:24,583 [INFO] COMPLETED at Thu Oct 19 02:16:24 GMT 2023
+02:16:24,584 [INFO] 
+02:16:24,584 [INFO] 
+02:16:24,584 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:16:24.584
+02:16:24,584 [INFO] !MESSAGE createProject
+02:16:24,585 [INFO] 
+02:16:24,587 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:16:24.585
+02:16:24,587 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:16:24 GMT 2023
+02:16:24,587 [INFO] 
+02:16:24,927 [INFO] COMPLETED at Thu Oct 19 02:16:24 GMT 2023
+02:16:24,927 [INFO] 
+02:16:24,927 [INFO] 
+02:16:24,928 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:16:24.857
+02:16:24,928 [INFO] !MESSAGE logoffProject
+02:16:24,928 [INFO] 
+02:16:24,928 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:16:24.858
+02:16:24,928 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:16:24 GMT 2023
+02:16:24,928 [INFO] 
+02:16:25,044 [INFO] 
+02:16:25,044 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:16:25.042
+02:16:25,044 [INFO] !MESSAGE Shutting down Command Line Application
+02:16:26,804 [INFO] 
+02:16:26,804 [INFO] *****************************************************
+02:16:26,804 [INFO] Starting to regenerateAllPoms
+02:16:26,804 [INFO] Generating commandline script...
+02:16:26,806 [INFO] added command: RegenerateAllPomsCommand regenerateAllPoms
+02:16:26,806 [INFO] Commandline script generated
+02:16:26,806 [INFO] Executing script...
+02:16:26,808 [INFO] 
+02:16:26,809 [INFO] Exec java -ea -Xms512m -Dfile.encoding=UTF-8 -Xmx2000m -XX:+CMSClassUnloadingEnabled -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication -Dmaven.local.repository=C:\Windows\system32\config\systemprofile\.m2\repository -Dci.mode=true -Dtalend.ci.generate.pom=true -Dmaven.repository=global -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest -classpath C:\Windows\system32\config\systemprofile\.installation\.commandline_8\plugins\org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar org.eclipse.core.launcher.Main -application org.talend.commandline.CommandLine -consolelog -data C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend scriptFile script_command_11546903693741177193.txt
+02:16:26,809 [INFO] loadScript, loaded temp command script file: C:\Windows\TEMP\script_command_11546903693741177193.txt
+02:16:26,842 [ERROR] Picked up JAVA_TOOL_OPTIONS: -Dmaven.ext.class.path="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMavenbed4e652\pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMavenbed4e652" 
+02:16:42,115 [INFO] !SESSION 2023-10-19 02:16:27.177 -----------------------------------------------
+02:16:42,116 [INFO] eclipse.buildId=unknown
+02:16:42,116 [INFO] java.version=11.0.14
+02:16:42,116 [INFO] java.vendor=Oracle Corporation
+02:16:42,116 [INFO] BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+02:16:42,116 [INFO] Framework arguments:  -application org.talend.commandline.CommandLine scriptFile script_command_11546903693741177193.txt
+02:16:42,116 [INFO] Command-line arguments:  -application org.talend.commandline.CommandLine -consolelog -data C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend scriptFile script_command_11546903693741177193.txt
+02:16:42,116 [INFO] 
+02:16:42,116 [INFO] !ENTRY org.eclipse.emf.ecore 2 0 2023-10-19 02:16:42.108
+02:16:42,118 [INFO] !MESSAGE Both 'org.talend.designer.unitemap' and 'org.talend.designer.unitemap' register a package for 'http://www.talend.org/unitemap'
+02:16:42,118 [INFO] 
+02:16:42,118 [INFO] !ENTRY org.eclipse.emf.ecore 2 0 2023-10-19 02:16:42.112
+02:16:42,119 [INFO] !MESSAGE Both 'org.talend.model' and 'org.talend.model' register a package for 'http://www.talend.org/component_cache'
+02:16:43,613 [INFO] 
+02:16:43,614 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:16:43.613
+02:16:43,616 [INFO] !MESSAGE 2023-10-19 02:16:43,603 INFO  org.talend.commandline.CommandLineApplication  - 
+02:16:43,616 [INFO] !!------------------------------------------------------------------------------!!
+02:16:43,616 [INFO] !!                                                                              !!
+02:16:43,616 [INFO] !!                                    TALEND                                    !!
+02:16:43,616 [INFO] !!   Starting Talend's platform log system.VERSION= 8.0.1.20230913_0925-patch   !!
+02:16:43,616 [INFO] !!                                                                              !!
+02:16:43,617 [INFO] !!------------------------------------------------------------------------------!!
+02:16:43,617 [INFO] 
+02:16:43,628 [INFO] 
+02:16:43,630 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:16:43.629
+02:16:43,630 [INFO] !MESSAGE Starting up Command Line Application
+02:16:43,631 [INFO] 
+02:16:43,631 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:16:43.631
+02:16:43,632 [INFO] !MESSAGE 2023-10-19 02:16:43,630 INFO  org.talend.utils.StudioKeysFileCheck  - encryptionKeyFilePath: C:\Windows\System32\config\systemprofile\.installation\.commandline_8\configuration\studio.keys
+02:16:43,632 [INFO] 
+02:16:46,205 [INFO] 
+02:16:46,206 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:16:46.184
+02:16:46,206 [INFO] !MESSAGE 2023-10-19 02:16:46,183 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Studio base p2 url is overwrited by: -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base
+02:16:46,206 [INFO] 
+02:16:46,206 [INFO] 
+02:16:46,206 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:16:46.185
+02:16:46,206 [INFO] !MESSAGE 2023-10-19 02:16:46,184 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Studio update p2 url is overwriten by parameter -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest
+02:16:46,206 [INFO] 
+02:16:46,319 [INFO] 
+02:16:46,319 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:16:46.319
+02:16:46,319 [INFO] !MESSAGE 2023-10-19 02:16:46,317 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Force profile OS check: -Dtalend.studio.p2.profileOS.check=true
+02:16:46,319 [INFO] 
+02:16:47,717 [INFO] 
+02:16:47,718 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:16:47.714
+02:16:47,718 [INFO] !MESSAGE Checking for update...
+02:17:05,316 [INFO] 
+02:17:05,316 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:17:05.315
+02:17:05,316 [INFO] !MESSAGE Commandline is update to date.
+02:17:05,328 [INFO] Start to check local patches....
+02:17:05,894 [INFO] 
+02:17:05,894 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:05.845
+02:17:05,894 [INFO] !MESSAGE 2023-10-19 02:17:05,844 INFO  org.talend.datacleansing.core.CleansingActivator  - Starting Talend Data Profiler platform.
+02:17:05,896 [INFO] 
+02:17:05,896 [INFO] 
+02:17:05,896 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:17:05.879
+02:17:05,896 [INFO] !MESSAGE 2023-10-19 02:17:05,877 WARN  org.talend.resource.ResourceManager  - The project can not get it from Project manager so that use default one
+02:17:05,896 [INFO] 
+02:17:05,896 [INFO] 
+02:17:05,896 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:17:05.881
+02:17:05,896 [INFO] !MESSAGE 2023-10-19 02:17:05,880 WARN  org.talend.resource.ResourceManager  - The project can not get it from Project manager so that use default one
+02:17:05,896 [INFO] 
+02:17:07,187 [INFO] COMPLETED at Thu Oct 19 02:17:07 GMT 2023
+02:17:07,187 [INFO] 
+02:17:07,187 [INFO] 
+02:17:07,187 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:17:07.187
+02:17:07,187 [INFO] !MESSAGE initLocal
+02:17:07,194 [INFO] 
+02:17:07,194 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:17:07.187
+02:17:07,194 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:17:07 GMT 2023
+02:17:07,195 [INFO] 
+02:17:08,515 [INFO] 
+02:17:08,516 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:08.515
+02:17:08,516 [INFO] !MESSAGE 2023-10-19 02:17:08,514 INFO  org.talend.commons.exception.CommonExceptionHandler  - org.talend.commons.utils.network.TalendProxySelector:-Dtalend.studio.proxy.excludeLoopbackAutomatically=true, adding missing loopback addresses into http.nonProxyHosts: [localhost, 0:0:0:0:0:0:0:1, 127.0.0.1]
+02:17:08,516 [INFO] 
+02:17:08,517 [INFO] 
+02:17:08,518 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:08.517
+02:17:08,518 [INFO] !MESSAGE 2023-10-19 02:17:08,516 INFO  org.talend.commons.exception.CommonExceptionHandler  - org.talend.commons.utils.network.TalendProxySelector:-Dtalend.studio.proxy.excludeLoopbackAutomatically=true, adding missing loopback addresses into https.nonProxyHosts: [localhost, 0:0:0:0:0:0:0:1, 127.0.0.1]
+02:17:08,518 [INFO] 
+02:17:10,842 [INFO] 
+02:17:10,843 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:10.825
+02:17:10,843 [INFO] !MESSAGE 2023-10-19 02:17:10,823 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-bundle, version=8.0.1.20230810_0855, classifier=null, type=pom, componentType=0] was already installed
+02:17:10,843 [INFO] 
+02:17:10,843 [INFO] 
+02:17:10,843 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:10.833
+02:17:10,843 [INFO] !MESSAGE 2023-10-19 02:17:10,832 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-docker, version=8.0.1.20230905_0230, classifier=null, type=pom, componentType=0] was already installed
+02:17:10,843 [INFO] 
+02:17:10,843 [INFO] 
+02:17:10,857 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:10.846
+02:17:10,857 [INFO] !MESSAGE 2023-10-19 02:17:10,837 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-karaf, version=8.0.1.20230630_0809, classifier=null, type=pom, componentType=0] was already installed
+02:17:10,857 [INFO] 
+02:17:10,857 [INFO] 
+02:17:10,858 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:10.846
+02:17:10,858 [INFO] !MESSAGE 2023-10-19 02:17:10,846 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-lite, version=8.0.1.20230913_0925, classifier=null, type=pom, componentType=0] was already installed
+02:17:10,858 [INFO] 
+02:17:10,858 [INFO] 
+02:17:10,858 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:10.846
+02:17:10,858 [INFO] !MESSAGE 2023-10-19 02:17:10,846 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-osgici, version=8.0.1.20230912_1742, classifier=null, type=pom, componentType=0] was already installed
+02:17:10,858 [INFO] 
+02:17:10,886 [INFO] 
+02:17:10,912 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:10.890
+02:17:10,912 [INFO] !MESSAGE 2023-10-19 02:17:10,846 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tck, version=8.0.1.20230913_0925, classifier=null, type=pom, componentType=0] was already installed
+02:17:10,912 [INFO] 
+02:17:10,912 [INFO] 
+02:17:10,912 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:10.890
+02:17:10,912 [INFO] !MESSAGE 2023-10-19 02:17:10,890 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tcksdk, version=8.0.1.20230913_0925, classifier=null, type=pom, componentType=0] was already installed
+02:17:10,913 [INFO] 
+02:17:10,913 [INFO] 
+02:17:10,913 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:10.890
+02:17:10,913 [INFO] !MESSAGE 2023-10-19 02:17:10,890 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tcompv0, version=8.0.1.20230913_0925, classifier=null, type=pom, componentType=0] was already installed
+02:17:10,913 [INFO] 
+02:17:11,581 [INFO] 
+02:17:11,582 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:11.582
+02:17:11,583 [INFO] !MESSAGE 2023-10-19 02:17:11,359 INFO  org.talend.sdk.component.studio.ProcessManager  - Local addresses passed to sdk: [127.0.0.1, [0:0:0:0:0:0:0:1]]
+02:17:11,583 [INFO] 
+02:17:16,984 [ERROR] WARNING: An illegal reflective access operation has occurred
+02:17:16,984 [ERROR] WARNING: Illegal reflective access by org.apache.webbeans.proxy.Unsafe (file:/C:/Windows/system32/config/systemprofile/.m2/repository/org/apache/openwebbeans/openwebbeans-impl/2.0.27/openwebbeans-impl-2.0.27.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int)
+02:17:16,984 [ERROR] WARNING: Please consider reporting this to the maintainers of org.apache.webbeans.proxy.Unsafe
+02:17:16,984 [ERROR] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+02:17:16,984 [ERROR] WARNING: All illegal access operations will be denied in a future release
+02:17:17,931 [INFO] 
+02:17:17,932 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:17:17.931
+02:17:17,932 [INFO] !MESSAGE 2023-10-19 02:17:17,921 WARN  org.talend.sdk.component.studio.logging.JULToOsgiHandler  - [org.talend.sdk.component.server.service.ComponentManagerService.init] No system property 'jdk.serialFilter', ensure it is intended
+02:17:17,932 [INFO] 
+02:17:22,648 [INFO] Component server not yet ready, will wait again
+02:17:24,946 [INFO] 
+02:17:24,946 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:24.944
+02:17:24,946 [INFO] !MESSAGE 2023-10-19 02:17:24,943 INFO  org.talend.sdk.component.studio.ProcessManager  - Succeed to connect [http://127.0.0.1:50920/api/v1/environment]
+02:17:24,946 [INFO] 
+02:17:30,984 [ERROR] com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+02:17:30,984 [ERROR]  at [Source: (String)""; line: 1, column: 0]
+02:17:30,985 [ERROR] 	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+02:17:30,985 [ERROR] 	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4765)
+02:17:30,985 [ERROR] 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4667)
+02:17:30,985 [ERROR] 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
+02:17:30,985 [ERROR] 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3597)
+02:17:30,985 [ERROR] 	at org.talend.repository.model.migration.RemoveUnwantedUsageDataMigrationTask.execute(RemoveUnwantedUsageDataMigrationTask.java:32)
+02:17:30,985 [ERROR] 	at org.talend.migrationtool.MigrationToolService$1$1.run(MigrationToolService.java:464)
+02:17:30,985 [ERROR] 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+02:17:30,985 [ERROR] 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+02:17:30,985 [ERROR] 	at org.talend.migrationtool.MigrationToolService$1.run(MigrationToolService.java:544)
+02:17:30,985 [ERROR] 	at org.talend.repository.RepositoryWorkUnit.executeRun(RepositoryWorkUnit.java:103)
+02:17:30,985 [ERROR] 	at org.talend.core.repository.model.AbstractRepositoryFactory.executeRepositoryWorkUnit(AbstractRepositoryFactory.java:260)
+02:17:30,985 [ERROR] 	at org.talend.repository.localprovider.model.LocalRepositoryFactory.executeRepositoryWorkUnit(LocalRepositoryFactory.java:3783)
+02:17:30,985 [ERROR] 	at org.talend.core.repository.model.ProxyRepositoryFactory.executeRepositoryWorkUnit(ProxyRepositoryFactory.java:2719)
+02:17:30,985 [ERROR] 	at org.talend.migrationtool.MigrationToolService.delateExecuteMigrationTasksForLogon(MigrationToolService.java:555)
+02:17:30,985 [ERROR] 	at org.talend.migrationtool.MigrationToolService.executeMigrationTasksForLogon(MigrationToolService.java:214)
+02:17:30,985 [ERROR] 	at org.talend.repository.localprovider.model.LocalRepositoryFactory.executeMigrations(LocalRepositoryFactory.java:3867)
+02:17:30,985 [ERROR] 	at org.talend.core.repository.model.ProxyRepositoryFactory.executeMigrations(ProxyRepositoryFactory.java:344)
+02:17:30,986 [ERROR] 	at org.talend.core.repository.model.ProxyRepositoryFactory.logOnProject(ProxyRepositoryFactory.java:2290)
+02:17:30,986 [ERROR] 	at org.talend.commandline.util.RepositoryHandler.logonProjectLocally(RepositoryHandler.java:220)
+02:17:30,986 [ERROR] 	at org.talend.commandline.util.RepositoryHandler.logonProject(RepositoryHandler.java:113)
+02:17:30,986 [ERROR] 	at org.talend.commandline.command.CommandProcessor.logonProject(CommandProcessor.java:138)
+02:17:30,986 [ERROR] 	at org.talend.commandline.command.CommandProcessorSwitch.caseLogonProjectCommand(CommandProcessorSwitch.java:146)
+02:17:30,986 [ERROR] 	at org.talend.commandline.client.util.CommandAbstractSwitch.doSwitch(CommandAbstractSwitch.java:54)
+02:17:30,986 [ERROR] 	at org.talend.commandline.command.CommandConsumer.executeCommand(CommandConsumer.java:57)
+02:17:30,986 [ERROR] 	at org.talend.commandline.command.CommandConsumer.execute(CommandConsumer.java:35)
+02:17:30,986 [ERROR] 	at org.talend.commandline.cli.CommandLineHandler.process(CommandLineHandler.java:289)
+02:17:30,986 [ERROR] 	at org.talend.commandline.cli.CommandLineHandler.execute(CommandLineHandler.java:219)
+02:17:30,986 [ERROR] 	at org.talend.commandline.cli.CommandLineHandler.execute(CommandLineHandler.java:206)
+02:17:30,986 [ERROR] 	at org.talend.commandline.command.CommandProcessor.processScriptFile(CommandProcessor.java:423)
+02:17:30,986 [ERROR] 	at org.talend.commandline.cli.CommandLineHandler.executeClientCommand(CommandLineHandler.java:735)
+02:17:30,986 [ERROR] 	at org.talend.commandline.cli.CommandLineHandler.process(CommandLineHandler.java:268)
+02:17:30,986 [ERROR] 	at org.talend.commandline.cli.CommandLineHandler.execute(CommandLineHandler.java:219)
+02:17:30,986 [ERROR] 	at org.talend.commandline.cli.CommandLineHandler.execute(CommandLineHandler.java:206)
+02:17:30,986 [ERROR] 	at org.talend.commandline.mode.NormalCommandLine.start(NormalCommandLine.java:32)
+02:17:30,986 [ERROR] 	at org.talend.commandline.CommandLineApplication.start(CommandLineApplication.java:407)
+02:17:30,986 [ERROR] 	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+02:17:30,986 [ERROR] 	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+02:17:30,986 [ERROR] 	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+02:17:30,987 [ERROR] 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+02:17:30,987 [ERROR] 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+02:17:30,987 [ERROR] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+02:17:31,023 [ERROR] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+02:17:31,023 [ERROR] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+02:17:31,023 [ERROR] 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+02:17:31,023 [ERROR] 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+02:17:31,023 [ERROR] 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+02:17:31,023 [ERROR] 	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+02:17:31,023 [ERROR] 	at org.eclipse.equinox.launcher.Main.main(Main.java:1435)
+02:17:31,023 [ERROR] 	at org.eclipse.core.launcher.Main.main(Main.java:44)
+02:17:33,389 [INFO] 
+02:17:33,389 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:33.389
+02:17:33,389 [INFO] !MESSAGE 2023-10-19 02:17:33,388 INFO  org.talend.designer.codegen.components.model.ComponentsLoader  - allSet size: 1021, total: 1021
+02:17:33,389 [INFO] 
+02:17:38,969 [INFO] 
+02:17:38,970 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:38.958
+02:17:38,970 [INFO] !MESSAGE 2023-10-19 02:17:38,958 INFO  org.talend.designer.codegen.components.model.ComponentsFactory  - 1187 components loaded in 6179 ms
+02:17:38,970 [INFO] 
+02:17:45,027 [ERROR] [Fatal Error] :1:1: Content is not allowed in prolog.
+02:17:45,096 [ERROR] [Fatal Error] :1:1: Content is not allowed in prolog.
+
+02:17:46,551 [INFO] 
+02:17:46,552 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:17:46.552
+02:17:46,552 [INFO] !MESSAGE 2023-10-19 02:17:46,550 WARN  org.talend.commons.exception.CommonExceptionHandler  - Can't find any signature
+02:17:46,552 [INFO] 
+02:17:46,822 [INFO] 
+02:17:46,822 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:17:46.822
+02:17:46,822 [INFO] !MESSAGE 2023-10-19 02:17:46,821 WARN  org.talend.sdk.component.studio.logging.JULToOsgiHandler  - [com.sun.org.slf4j.internal.Logger.warn] The input bytes to the digest operation are null. This may be due to a problem with the Reference URI or its Transforms.
+02:17:46,822 [INFO] 
+02:17:47,303 [INFO] 
+02:17:47,303 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:17:47.303
+02:17:47,303 [INFO] !MESSAGE 2023-10-19 02:17:47,302 WARN  org.talend.commons.exception.CommonExceptionHandler  - Can't find any signature
+02:17:47,303 [INFO] 
+02:17:47,327 [INFO] 
+02:17:47,327 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:17:47.314
+02:17:47,327 [INFO] !MESSAGE 2023-10-19 02:17:47,314 WARN  org.talend.sdk.component.studio.logging.JULToOsgiHandler  - [com.sun.org.slf4j.internal.Logger.warn] The input bytes to the digest operation are null. This may be due to a problem with the Reference URI or its Transforms.
+02:17:47,327 [INFO] 
+02:17:47,381 [ERROR] [Fatal Error] :1:2: The markup in the document preceding the root element must be well-formed.
+02:17:47,383 [ERROR] [Fatal Error] :1:2: The markup in the document preceding the root element must be well-formed.
+0
+02:17:48,173 [INFO] 
+02:17:48,173 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:17:48.169
+02:17:48,173 [INFO] !MESSAGE 2023-10-19 02:17:48,168 WARN  org.talend.commons.exception.CommonExceptionHandler  - Can't find any signature
+02:17:48,173 [INFO] 
+02:17:48,188 [INFO] 
+02:17:48,188 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:17:48.188
+02:17:48,188 [INFO] !MESSAGE 2023-10-19 02:17:48,187 WARN  org.talend.sdk.component.studio.logging.JULToOsgiHandler  - [com.sun.org.slf4j.internal.Logger.warn] The input bytes to the digest operation are null. This may be due to a problem with the Reference URI or its Transforms.
+02:17:48,188 [INFO] 
+02:17:51,805 [ERROR] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+02:17:51,805 [ERROR] SLF4J: Defaulting to no-operation (NOP) logger implementation
+02:17:51,805 [ERROR] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+02:17:54,835 [INFO] 
+02:17:54,835 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:54.828
+02:17:54,835 [INFO] !MESSAGE 2023-10-19 02:17:54,824 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+02:17:54,835 [INFO] 
+02:17:58,092 [INFO] 
+02:17:58,092 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:17:58.092
+02:17:58,093 [INFO] !MESSAGE 2023-10-19 02:17:58,091 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 3 sec
+02:17:58,093 [INFO] 
+02:18:05,078 [INFO] 
+02:18:05,078 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:05.078
+02:18:05,078 [INFO] !MESSAGE 2023-10-19 02:18:05,077 INFO  org.talend.designer.maven.launch.TalendMavenLaunchDelegate  - C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms\code\routines
+02:18:05,078 [INFO] 
+02:18:05,083 [INFO] 
+02:18:05,084 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:05.083
+02:18:05,084 [INFO] !MESSAGE 2023-10-19 02:18:05,082 INFO  org.talend.designer.maven.launch.TalendMavenLaunchDelegate  -  mvn -B -o -s C:\Windows\System32\config\systemprofile\.installation\.commandline_8\configuration\maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true -Dlicense.path="C:\Windows\System32\config\systemprofile\.installation\.commandline_8\license" -Dsession.id=NTI3MTIxMTY5NzY4MTg4NDk4Mg==
+02:18:05,084 [INFO] 
+02:18:16,039 [INFO] 
+02:18:16,040 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:16.039
+02:18:16,040 [INFO] !MESSAGE 2023-10-19 02:18:16,038 INFO  org.talend.core.repository.model.ProxyRepositoryFactory  - jobbuilder@talend.com logged on containercicdcloud
+02:18:16,040 [INFO] 
+02:18:21,840 [INFO] 
+02:18:21,841 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:21.840
+02:18:21,841 [INFO] !MESSAGE 2023-10-19 02:18:21,839 INFO  org.talend.dq.indicators.definitions.DefinitionHandler  - Indicator default definitions correctly saved in platform:/resource/CONTAINERCICDCLOUD/TDQ_Libraries/.Talend.definition
+02:18:21,841 [INFO] 
+02:18:24,824 [INFO] COMPLETED at Thu Oct 19 02:18:24 GMT 2023
+02:18:24,825 [INFO] 
+02:18:24,825 [INFO] 
+02:18:24,825 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:18:24.825
+02:18:24,825 [INFO] !MESSAGE logonProject
+02:18:24,825 [INFO] 
+02:18:24,826 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:18:24.825
+02:18:24,826 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:18:24 GMT 2023
+02:18:24,826 [INFO] 
+02:18:24,832 [INFO] 
+02:18:24,832 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:24.832
+02:18:24,832 [INFO] !MESSAGE 2023-10-19 02:18:24,831 INFO  org.talend.designer.maven.tools.AggregatorPomsHelper  - syncAllPomsWithoutProgress, pomFilter: 
+02:18:24,832 [INFO] 
+02:18:24,843 [INFO] 
+02:18:24,843 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:24.843
+02:18:24,843 [INFO] !MESSAGE 2023-10-19 02:18:24,842 INFO  org.talend.designer.maven.tools.AggregatorPomsHelper  - syncAllPomsWithoutProgress, isCIMode: true, useProfileMode: false
+02:18:24,843 [INFO] 
+02:18:24,853 [INFO] 
+02:18:24,853 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:24.853
+02:18:24,853 [INFO] !MESSAGE 2023-10-19 02:18:24,843 INFO  org.talend.designer.maven.launch.TalendMavenLaunchDelegate  - C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms
+02:18:24,853 [INFO] 
+02:18:24,854 [INFO] 
+02:18:24,854 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:24.854
+02:18:24,854 [INFO] !MESSAGE 2023-10-19 02:18:24,853 INFO  org.talend.designer.maven.launch.TalendMavenLaunchDelegate  -  mvn -B -o -s C:\Windows\System32\config\systemprofile\.installation\.commandline_8\configuration\maven_user_settings.xml install -llr -N -Dci.builder.skip=true -Dlicense.path="C:\Windows\System32\config\systemprofile\.installation\.commandline_8\license" -Dsession.id=NzY1Mzk2MTY5NzY4MTkwNDg0Mw==
+02:18:24,854 [INFO] 
+02:18:28,550 [INFO] 
+02:18:28,550 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:28.550
+02:18:28,550 [INFO] !MESSAGE 2023-10-19 02:18:28,549 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+02:18:28,550 [INFO] 
+02:18:29,835 [INFO] 
+02:18:29,835 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:29.835
+02:18:29,835 [INFO] !MESSAGE 2023-10-19 02:18:29,834 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 1 sec
+02:18:29,835 [INFO] 
+02:18:31,573 [INFO] 
+02:18:31,573 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:31.573
+02:18:31,573 [INFO] !MESSAGE 2023-10-19 02:18:31,571 INFO  org.talend.designer.maven.launch.TalendMavenLaunchDelegate  - C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms\code\routines
+02:18:31,573 [INFO] 
+02:18:31,575 [INFO] 
+02:18:31,575 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:31.575
+02:18:31,575 [INFO] !MESSAGE 2023-10-19 02:18:31,574 INFO  org.talend.designer.maven.launch.TalendMavenLaunchDelegate  -  mvn -B -o -s C:\Windows\System32\config\systemprofile\.installation\.commandline_8\configuration\maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true -Dlicense.path="C:\Windows\System32\config\systemprofile\.installation\.commandline_8\license" -Dsession.id=MTk3NjU0MTY5NzY4MTkxMTU2NQ==
+02:18:31,575 [INFO] 
+02:18:38,972 [INFO] 
+02:18:38,972 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:38.972
+02:18:38,972 [INFO] !MESSAGE 2023-10-19 02:18:38,972 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+02:18:38,972 [INFO] 
+02:18:39,862 [INFO] 
+02:18:39,862 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:39.862
+02:18:39,862 [INFO] !MESSAGE 2023-10-19 02:18:39,859 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+02:18:39,862 [INFO] 
+02:18:40,220 [INFO] 
+02:18:40,220 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:40.218
+02:18:40,221 [INFO] !MESSAGE 2023-10-19 02:18:40,217 INFO  org.talend.designer.maven.launch.TalendMavenLaunchDelegate  - C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms\code\beans
+02:18:40,221 [INFO] 
+02:18:40,221 [INFO] 
+02:18:40,221 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:40.221
+02:18:40,221 [INFO] !MESSAGE 2023-10-19 02:18:40,219 INFO  org.talend.designer.maven.launch.TalendMavenLaunchDelegate  -  mvn -B -o -s C:\Windows\System32\config\systemprofile\.installation\.commandline_8\configuration\maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true -Dlicense.path="C:\Windows\System32\config\systemprofile\.installation\.commandline_8\license" -Dsession.id=MTg0MTgzMTY5NzY4MTkyMDIxNQ==
+02:18:40,221 [INFO] 
+02:18:47,670 [INFO] 
+02:18:47,670 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:18:47.656
+02:18:47,670 [INFO] !MESSAGE 2023-10-19 02:18:47,656 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: camel-azure
+02:18:47,670 [INFO] 
+02:18:48,271 [INFO] 
+02:18:48,271 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:18:48.268
+02:18:48,271 [INFO] !MESSAGE 2023-10-19 02:18:48,268 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: camel-aws-mq
+02:18:48,271 [INFO] 
+02:18:54,510 [INFO] 
+02:18:54,510 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:54.507
+02:18:54,510 [INFO] !MESSAGE 2023-10-19 02:18:54,506 INFO  org.talend.designer.maven.launch.TalendMavenLaunchDelegate  - C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms
+02:18:54,510 [INFO] 
+02:18:54,510 [INFO] 
+02:18:54,510 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:54.508
+02:18:54,510 [INFO] !MESSAGE 2023-10-19 02:18:54,507 INFO  org.talend.designer.maven.launch.TalendMavenLaunchDelegate  -  mvn -B -o -s C:\Windows\System32\config\systemprofile\.installation\.commandline_8\configuration\maven_user_settings.xml install -llr -N -Dci.builder.skip=true -Dlicense.path="C:\Windows\System32\config\systemprofile\.installation\.commandline_8\license" -Dsession.id=MTY2MzExMTY5NzY4MTkzNDUwNA==
+02:18:54,510 [INFO] 
+02:18:57,955 [INFO] 
+02:18:57,955 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:18:57.955
+02:18:57,955 [INFO] !MESSAGE 2023-10-19 02:18:57,954 INFO  org.talend.designer.maven.tools.AggregatorPomsHelper  - syncAllPomsWithoutProgress, done
+02:18:57,955 [INFO] 
+02:18:57,958 [INFO] COMPLETED at Thu Oct 19 02:18:57 GMT 2023
+02:18:57,958 [INFO] 
+02:18:57,959 [INFO] 
+02:18:57,959 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:18:57.959
+02:18:57,959 [INFO] !MESSAGE regenerateAllPoms
+02:18:57,959 [INFO] 
+02:18:57,959 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:18:57.959
+02:18:57,960 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:18:57 GMT 2023
+02:18:57,960 [INFO] 
+02:18:58,125 [INFO] COMPLETED at Thu Oct 19 02:18:58 GMT 2023
+02:18:58,125 [INFO] 
+02:18:58,125 [INFO] 
+02:18:58,125 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:18:58.125
+02:18:58,125 [INFO] !MESSAGE logoffProject
+02:18:58,125 [INFO] 
+02:18:58,125 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:18:58.125
+02:18:58,125 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:18:58 GMT 2023
+02:18:58,125 [INFO] 
+02:18:58,296 [INFO] 
+02:18:58,296 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:18:58.296
+02:18:58,296 [INFO] !MESSAGE Shutting down Command Line Application
+02:19:00,733 [INFO] Script execution finished.
+02:19:00,733 [INFO] Successfully regenerateAllPoms
+02:19:00,733 [INFO] *****************************************************
+02:19:00,737 [INFO] ------------------------------------------------------------------------
+02:19:00,738 [INFO] BUILD SUCCESS
+02:19:00,738 [INFO] ------------------------------------------------------------------------
+02:19:00,741 [INFO] Total time:  03:20 min
+02:19:00,741 [INFO] Finished at: 2023-10-19T02:19:00Z
+02:19:00,741 [INFO] ------------------------------------------------------------------------
+02:19:00,756 [INFO] [jenkins-event-spy] Generated C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMavenbed4e652\maven-spy-20231019-021540-1191185857657207665481.log
+[Pipeline] }
+[withMaven] Jenkins Task Scanner Plugin not found, don't display results of source code scanning for 'TODO' and 'FIXME' in pipeline screen.
+[withMaven] Publishers: Pipeline Graph Publisher: 8 ms, Generated Artifacts Publisher: 3 ms, Open Task Scanner Publisher: 2 ms
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\code\routines\pom.xml under org\example\containercicdcloud\code\routines\8.0.1\routines-8.0.1.pom
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\code\routines\target\routines-8.0.1.jar under org\example\containercicdcloud\code\routines\8.0.1\routines-8.0.1.jar
+[withMaven] junitPublisher - Archive test results for Maven artifact org.example.containercicdcloud.code:routines:jar:8.0.1 generated by maven-surefire-plugin:test (default-test): CONTAINERCICDCLOUD\poms\code\routines\target\surefire-reports\*.xml
+Recording test results
+No test report files were found. Configuration error?
+None of the test reports contained any result
+[withMaven] Jenkins Task Scanner Plugin not found, don't display results of source code scanning for 'TODO' and 'FIXME' in pipeline screen.
+[withMaven] Publishers: Pipeline Graph Publisher: 5 ms, Generated Artifacts Publisher: 34 ms, Junit Publisher: 8 ms, Open Task Scanner Publisher: 1 ms
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\pom.xml under org\example\containercicdcloud\code.Master\8.0.1\code.Master-8.0.1.pom
+[withMaven] Jenkins Task Scanner Plugin not found, don't display results of source code scanning for 'TODO' and 'FIXME' in pipeline screen.
+[withMaven] Publishers: Pipeline Graph Publisher: 1 ms, Generated Artifacts Publisher: 16 ms, Open Task Scanner Publisher: 2 ms
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\code\routines\pom.xml under org\example\containercicdcloud\code\routines\8.0.1\routines-8.0.1.pom
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\code\routines\target\routines-8.0.1.jar under org\example\containercicdcloud\code\routines\8.0.1\routines-8.0.1.jar
+[withMaven] junitPublisher - Archive test results for Maven artifact org.example.containercicdcloud.code:routines:jar:8.0.1 generated by maven-surefire-plugin:test (default-test): CONTAINERCICDCLOUD\poms\code\routines\target\surefire-reports\*.xml
+Recording test results
+No test report files were found. Configuration error?
+None of the test reports contained any result
+[withMaven] Jenkins Task Scanner Plugin not found, don't display results of source code scanning for 'TODO' and 'FIXME' in pipeline screen.
+[withMaven] Publishers: Pipeline Graph Publisher: 2 ms, Generated Artifacts Publisher: 25 ms, Junit Publisher: 7 ms, Open Task Scanner Publisher: 1 ms
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\code\beans\pom.xml under org\example\containercicdcloud\bean\beans\8.0.1\beans-8.0.1.pom
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\code\beans\target\beans-8.0.1.jar under org\example\containercicdcloud\bean\beans\8.0.1\beans-8.0.1.jar
+[withMaven] junitPublisher - Archive test results for Maven artifact org.example.containercicdcloud.bean:beans:jar:8.0.1 generated by maven-surefire-plugin:test (default-test): CONTAINERCICDCLOUD\poms\code\beans\target\surefire-reports\*.xml
+Recording test results
+No test report files were found. Configuration error?
+None of the test reports contained any result
+[withMaven] Jenkins Task Scanner Plugin not found, don't display results of source code scanning for 'TODO' and 'FIXME' in pipeline screen.
+[withMaven] Publishers: Pipeline Graph Publisher: 3 ms, Generated Artifacts Publisher: 25 ms, Junit Publisher: 6 ms, Open Task Scanner Publisher: 1 ms
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\pom.xml under org\example\containercicdcloud\code.Master\8.0.1\code.Master-8.0.1.pom
+[withMaven] Jenkins Task Scanner Plugin not found, don't display results of source code scanning for 'TODO' and 'FIXME' in pipeline screen.
+[withMaven] Publishers: Pipeline Graph Publisher: 2 ms, Generated Artifacts Publisher: 19 ms, Open Task Scanner Publisher: 2 ms
+[Pipeline] // withMaven
+[Pipeline] echo
+generateAllPoms - done
+[Pipeline] echo
+displayAvailableJobsToBuild - begin - Project: CONTAINERCICDCLOUD
+[Pipeline] readFile
+[Pipeline] echo
+code/beans
+code/routines
+jobs/process/joindatadb_0.1
+jobs/process/test_0.1
+
+[Pipeline] echo
+displayAvailableJobsToBuild - done - Project: CONTAINERCICDCLOUD
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] echo
+buildJobs - begin
+[Pipeline] withMaven
+[withMaven] Options: []
+[withMaven] Available options: 
+[withMaven] using JDK installation provided by the build agent
+[withMaven] using Maven installation 'M3'
+[Pipeline] {
+[Pipeline] isUnix
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend>mvn --batch-mode -f ./CONTAINERCICDCLOUD/poms/pom.xml clean package -fae -am -e  -pl jobs/process/test_0.1 -Dtalend.job.applyContextToChildren=true  
+----- withMaven Wrapper script -----
+Picked up JAVA_TOOL_OPTIONS: -Dmaven.ext.class.path="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca" 
+Apache Maven 3.9.5 (57804ffe001d7215b5e7bcb531cf83df38f93546)
+Maven home: C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3
+Java version: 11.0.14, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-11.0.14
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows server 2016", version: "10.0", arch: "amd64", family: "windows"
+02:19:05,457 [INFO] [jenkins-event-spy] Generate C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\maven-spy-20231019-021905-3782919736777127116040.log.tmp ...
+02:19:05,686 [INFO] Error stacktraces are turned on.
+02:19:05,796 [INFO] Scanning for projects...
+02:19:06,031 [INFO] ------------------------------------------------------------------------
+02:19:06,032 [INFO] Reactor Build Order:
+02:19:06,032 [INFO] 
+02:19:06,034 [INFO] CONTAINERCICDCLOUD Codes Master                                    [pom]
+02:19:06,034 [INFO] CONTAINERCICDCLOUD Routines                                        [jar]
+02:19:06,034 [INFO] CONTAINERCICDCLOUD test-0.1.0 (0.1,Job Designs)                    [jar]
+02:19:06,062 [INFO] 
+02:19:06,073 [INFO] -------------< org.example.containercicdcloud:code.Master >-------------
+02:19:06,073 [INFO] Building CONTAINERCICDCLOUD Codes Master 8.0.1                     [1/3]
+02:19:06,077 [INFO]   from pom.xml
+02:19:06,077 [INFO] --------------------------------[ pom ]---------------------------------
+02:19:06,228 [INFO] 
+02:19:06,229 [INFO] --- clean:3.0.0:clean (default-clean) @ code.Master ---
+02:19:06,608 [INFO] 
+02:19:06,609 [INFO] --- builder:8.0.12:generate (default) @ code.Master ---
+02:19:06,888 [INFO] 
+02:19:06,888 [INFO] *****************************************************
+02:19:06,890 [INFO] Workspace found :C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend
+02:19:06,890 [INFO] List projects from:C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend
+02:19:06,890 [INFO]   Not valid folder (no talend project) in:.JETEmitters
+02:19:06,890 [INFO]   Not valid folder (no talend project) in:.metadata
+02:19:06,890 [INFO]   Not valid folder (no talend project) in:.repositories
+02:19:06,994 [INFO]   Found project:CONTAINERCICDCLOUD (Talend Cloud API Services Platform | R2023-09v1 | 8.0.1.20230913_0925-patch)
+02:19:06,995 [INFO]   Not valid folder (no talend project) in:report
+02:19:06,999 [INFO] user props: {talend.job.applyContextToChildren=true}, sys props: {env.NUMBER_OF_PROCESSORS=4, env.USERPROFILE=C:\Windows\system32\config\systemprofile, java.specification.version=11, env.WINSW_SERVICE_ID=jenkins, sun.cpu.isalist=amd64, env.EXECUTOR_NUMBER=0, sun.arch.data.model=64, env.PROGRAMW6432=C:\Program Files, java.vendor.url=https://openjdk.java.net/, env.JENKINS_HOME=C:\ProgramData\Jenkins\.jenkins, env.OS=Windows_NT, env.JOB_DISPLAY_URL=http://localhost:8080/job/SimpleTalend/display/redirect, sun.boot.library.path=C:\Program Files\Java\jdk-11.0.14\bin, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher --batch-mode --show-version --settings C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\settings.xml --batch-mode -f ./CONTAINERCICDCLOUD/poms/pom.xml clean package -fae -am -e -pl jobs/process/test_0.1 -Dtalend.job.applyContextToChildren=true, env.SYSTEMROOT=C:\Windows, jdk.debug=release, maven.version=3.9.5, java.specification.vendor=Oracle Corporation, java.version.date=2022-01-18, java.home=C:\Program Files\Java\jdk-11.0.14, env.POM_DIR=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, env.TALEND_CI_RUN_CONFIG= -Dlicense.path=license
+ -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base
+ -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest
+ -Dorg.slf4j.simpleLogger.showDateTime=true
+ -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS, env.JENKINS_SERVER_COOKIE=durable-994d429e00e2e5a589a327a018770a0218abc8f17da78da179a08156dd81bcce, env.LOCALAPPDATA=C:\Windows\system32\config\systemprofile\AppData\Local, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=11.0.14+8-LTS-263, env.RUN_ARTIFACTS_DISPLAY_URL=http://localhost:8080/job/SimpleTalend/13/display/redirect?page=artifacts, env.PATH=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\ProgramData\GooGet;C:\Program Files\Google\Compute Engine\metadata_scripts;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Google\Compute Engine\sysprep;C:\Program Files\VisualSVN Server\bin;C:\Program Files\Java\jdk-11.0.14\bin;C:\Program Files\apache-maven-3.6.3\bin;C:\curl;C:\Program Files\Git\cmd;C:\Program Files\docker;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps, env.PUBLIC=C:\Users\Public, env.EXEC_DIR=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend, env.GOOGETROOT=C:\ProgramData\GooGet, env.MVN_CMD_DIR=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca, env.COMMONPROGRAMW6432=C:\Program Files\Common Files, file.encoding=Cp1252, java.vendor.version=18.9, env.COMPUTERNAME=STUDENTPC-AZURE, env.APPDATA=C:\Windows\system32\config\systemprofile\AppData\Roaming, java.io.tmpdir=C:\Windows\TEMP\, java.version=11.0.14, env.WORKSPACE=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.awt.windows.WPrinterJob, env.BUILD_ID=13, env.GIT_PROJECT_LIST=CONTAINERCICDCLOUD;https://github.com/vmahiwal/containercicloud;main, env.JOB_NAME=SimpleTalend, java.library.path=C:\Program Files\Java\jdk-11.0.14\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\ProgramData\GooGet;C:\Program Files\Google\Compute Engine\metadata_scripts;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Google\Compute Engine\sysprep;C:\Program Files\VisualSVN Server\bin;C:\Program Files\Java\jdk-11.0.14\bin;C:\Program Files\apache-maven-3.6.3\bin;C:\curl;C:\Program Files\Git\cmd;C:\Program Files\docker;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;., java.vendor=Oracle Corporation, env.ERROR_CODE=0, classworlds.conf=C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3\bin\m2.conf, env.HUDSON_HOME=C:\ProgramData\Jenkins\.jenkins, sun.io.unicode.encoding=UnicodeLittle, sun.desktop=windows, env.RUN_TESTS_DISPLAY_URL=http://localhost:8080/job/SimpleTalend/13/display/redirect?page=tests, env.TALEND_HOME=C:/Talend/7.3.1, user.timezone=, env.RUN_DISPLAY_URL=http://localhost:8080/job/SimpleTalend/13/display/redirect, os.name=Windows Server 2016, java.vm.specification.version=11, user.home=C:\Windows\system32\config\systemprofile, env.ALLUSERSPROFILE=C:\ProgramData, env.FILE_ARG=./CONTAINERCICDCLOUD/poms/pom.xml, env.HUDSON_COOKIE=b52a3714-3d16-418a-aa25-023ca9accdce, env.TALEND_CI_BUILD_OPTIONS=-Dtalend.job.applyContextToChildren=true, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, env.JENKINS_URL=http://localhost:8080/, path.separator=;, os.version=10.0, env.CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher, env.PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, env.NODE_NAME=built-in, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.GIT_CREDENTIALS_ID=git_talend, license.path=license, maven.ext.class.path=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\pipeline-maven-spy.jar, env.ZONE=projects/28599674682/zones/asia-southeast1-b, env.M2_HOME=C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3, env.MAVEN_CONFIG=--batch-mode --show-version --settings "C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\settings.xml" , env.PROJECT_TO_BUILD=CONTAINERCICDCLOUD, env.VISUALSVN_SERVER=C:\Program Files\VisualSVN Server\, env.USERNAME=STUDENTPC-AZURE$, os.arch=amd64, maven.multiModuleProjectDirectory=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend, env.MAVEN_PROJECTBASEDIR=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend, java.vm.info=mixed mode, env.TEMP=C:\Windows\TEMP, env.WINSW_EXECUTABLE=C:\Program Files\Jenkins\jenkins.exe, java.class.version=55.0, awt.toolkit=sun.awt.windows.WToolkit, env.BUILD_TAG=jenkins-SimpleTalend-13, sun.jnu.encoding=Cp1252, env.HUDSON_URL=http://localhost:8080/, env.MAVEN_SETTINGS_ID=maven_settings, talend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest, maven.build.version=Apache Maven 3.9.5 (57804ffe001d7215b5e7bcb531cf83df38f93546), maven.home=C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3, env.JENKINS_NODE_COOKIE=5674f43b-1e72-4cd9-a952-83af3e209e25, env.JAVA_HOME=C:\Program Files\Java\jdk-11.0.14, env.PROGRAMFILES=C:\Program Files, file.separator=\, java.vm.compressedOopsMode=Zero based, env.CLASSWORLDS_JAR="C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3\boot\plexus-classworlds-2.7.0.jar", line.separator=
+, env.PROMPT=$P$G, env.CI_BUILDER_VERSION=8.0.4, env.JAVA_TOOL_OPTIONS=-Dmaven.ext.class.path="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca" , env.PROCESSOR_REVISION=4f00, env.SERVICE_ID=jenkins, env.PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 79 Stepping 0, GenuineIntel, org.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS, env.PROGRAMDATA=C:\ProgramData, user.name=STUDENTPC-AZURE$, talend.job.applyContextToChildren=true, env.BUILD_URL=http://localhost:8080/job/SimpleTalend/13/, env.JOB_URL=http://localhost:8080/job/SimpleTalend/, env.SYSTEMDRIVE=C:, env.JVMCONFIG=\.mvn\jvm.config, env.PROGRAMFILES(X86)=C:\Program Files (x86), env.NODE_LABELS=built-in, env.PROCESSOR_LEVEL=6, env.PSMODULEPATH=C:\Program Files (x86)\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\PowerShell;C:\Program Files\VisualSVN Server\PowerShellModules, env.TMP=C:\Windows\TEMP, env.RUN_CHANGES_DISPLAY_URL=http://localhost:8080/job/SimpleTalend/13/display/redirect?page=changes, sun.os.patch.level=, env.JOBS_TO_BUILD=jobs/process/test_0.1, env.MVN_SETTINGS=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\settings.xml, library.jansi.path=C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3\lib\jansi-native, env.WINDIR=C:\Windows, env.MAVEN_OPTS= -Dlicense.path=license  -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base  -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest  -Dorg.slf4j.simpleLogger.showDateTime=true  -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS, env.BUILD_NUMBER=13, env.HUDSON_SERVER_COOKIE=ed87b97fff6dac2c, java.class.path=C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3\boot\plexus-classworlds-2.7.0.jar, java.vm.vendor=Oracle Corporation, env.PROCESSOR_ARCHITECTURE=AMD64, user.variant=, env.COMMONPROGRAMFILES=C:\Program Files\Common Files, maven.conf=C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3/conf, org.jenkinsci.plugins.pipeline.maven.reportsFolder=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca, env.CI=true, sun.java.launcher=SUN_STANDARD, user.country=US, env.USERDOMAIN=WORKGROUP, env.COMSPEC=C:\Windows\system32\cmd.exe, sun.cpu.endian=little, user.language=en, env.JAVACMD=C:\Program Files\Java\jdk-11.0.14\bin\java.exe, talend.studio.p2.base=https://update.talend.com/Studio/8/base, org.slf4j.simpleLogger.showDateTime=true, env.MAVEN_HOME=C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\M3, env.WDIR=C:\, env.MVN_GOALS=clean package, env.=C:=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend, java.runtime.name=Java(TM) SE Runtime Environment, env.BUILD_DISPLAY_NAME=#13, env.UNIX_TOOLS=false, env.STAGE_NAME=Build, env.MVN_CMD=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\mvn.cmd, env.COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files, env.MAVEN_CMD_LINE_ARGS=--batch-mode --show-version --settings "C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\settings.xml"  --batch-mode -f ./CONTAINERCICDCLOUD/poms/pom.xml clean package -fae -am -e  -pl jobs/process/test_0.1 -Dtalend.job.applyContextToChildren=true, java.vendor.url.bug=https://bugreport.java.com/bugreport/, user.dir=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend, env.WORKSPACE_TMP=C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp, env.BASE=C:\Program Files\Jenkins, java.vm.version=11.0.14+8-LTS-263, env.JOB_BASE_NAME=SimpleTalend}, proj2Versions: {CONTAINERCICDCLOUD=[Ljava.lang.String;@597f0937}, productPath: C:\Windows\system32\config\systemprofile/.installation/.commandline_8
+02:19:07,023 [INFO] 
+02:19:07,024 [INFO] Resolve patches...
+02:19:07,024 [INFO] talend.studio.p2.update: https://update.talend.com/Studio/8/updates/latest
+02:19:08,884 [INFO] 
+02:19:08,884 [INFO] -----------------------------------------------------
+02:19:08,884 [INFO] Start to install Commandline...
+02:19:08,884 [INFO] 
+02:19:08,884 [INFO] Found existing installation, skipping...
+02:19:08,885 [INFO] 
+02:19:08,885 [INFO] Resolve license...
+02:19:08,886 [INFO] 
+02:19:08,886 [INFO] Commandline installation finished.
+02:19:08,886 [INFO] -----------------------------------------------------
+02:19:08,886 [INFO] 
+02:19:08,886 [INFO] Skipping upgrade on existing installation...
+02:19:08,901 [INFO] 
+02:19:08,901 [INFO] Creating the detected projects for Commandline workspace.
+02:19:08,903 [INFO]  Created project (base on existing folder): CONTAINERCICDCLOUD
+02:19:08,921 [INFO] 
+02:19:08,921 [INFO] Exec java -ea -Xms512m -Dfile.encoding=UTF-8 -Xmx2000m -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.security.pkcs=ALL-UNNAMED --add-opens=java.base/sun.security.x509=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-modules=ALL-SYSTEM -Dmaven.local.repository=C:\Windows\system32\config\systemprofile\.m2\repository -Dci.mode=true -Dtalend.job.applyContextToChildren=true -Dmaven.repository=global -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest -classpath C:\Windows\system32\config\systemprofile\.installation\.commandline_8\plugins\org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar org.eclipse.core.launcher.Main -application org.talend.commandline.CommandLine -consolelog -data C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend scriptFile script_command_10885822621784359642.txt
+02:19:08,939 [INFO] loadScript, loaded temp command script file: C:\Windows\TEMP\script_command_10885822621784359642.txt
+02:19:08,998 [ERROR] Picked up JAVA_TOOL_OPTIONS: -Dmaven.ext.class.path="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca" 
+02:19:24,597 [INFO] !SESSION 2023-10-19 02:19:09.366 -----------------------------------------------
+02:19:24,598 [INFO] eclipse.buildId=unknown
+02:19:24,598 [INFO] java.version=11.0.14
+02:19:24,598 [INFO] java.vendor=Oracle Corporation
+02:19:24,598 [INFO] BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+02:19:24,599 [INFO] Framework arguments:  -application org.talend.commandline.CommandLine scriptFile script_command_10885822621784359642.txt
+02:19:24,599 [INFO] Command-line arguments:  -application org.talend.commandline.CommandLine -consolelog -data C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend scriptFile script_command_10885822621784359642.txt
+02:19:24,599 [INFO] 
+02:19:24,599 [INFO] !ENTRY org.eclipse.emf.ecore 2 0 2023-10-19 02:19:24.597
+02:19:24,599 [INFO] !MESSAGE Both 'org.talend.designer.unitemap' and 'org.talend.designer.unitemap' register a package for 'http://www.talend.org/unitemap'
+02:19:24,611 [INFO] 
+02:19:24,611 [INFO] !ENTRY org.eclipse.emf.ecore 2 0 2023-10-19 02:19:24.601
+02:19:24,612 [INFO] !MESSAGE Both 'org.talend.model' and 'org.talend.model' register a package for 'http://www.talend.org/component_cache'
+02:19:26,692 [INFO] 
+02:19:26,693 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:19:26.692
+02:19:26,693 [INFO] !MESSAGE 2023-10-19 02:19:26,679 INFO  org.talend.commandline.CommandLineApplication  - 
+02:19:26,693 [INFO] !!------------------------------------------------------------------------------!!
+02:19:26,693 [INFO] !!                                                                              !!
+02:19:26,693 [INFO] !!                                    TALEND                                    !!
+02:19:26,693 [INFO] !!   Starting Talend's platform log system.VERSION= 8.0.1.20230913_0925-patch   !!
+02:19:26,693 [INFO] !!                                                                              !!
+02:19:26,693 [INFO] !!------------------------------------------------------------------------------!!
+02:19:26,694 [INFO] 
+02:19:26,705 [INFO] 
+02:19:26,706 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:19:26.703
+02:19:26,706 [INFO] !MESSAGE Starting up Command Line Application
+02:19:26,708 [INFO] 
+02:19:26,708 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:19:26.707
+02:19:26,708 [INFO] !MESSAGE 2023-10-19 02:19:26,706 INFO  org.talend.utils.StudioKeysFileCheck  - encryptionKeyFilePath: C:\Windows\System32\config\systemprofile\.installation\.commandline_8\configuration\studio.keys
+02:19:26,708 [INFO] 
+02:19:29,533 [INFO] 
+02:19:29,533 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:19:29.533
+02:19:29,534 [INFO] !MESSAGE 2023-10-19 02:19:29,532 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Studio base p2 url is overwrited by: -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base
+02:19:29,534 [INFO] 
+02:19:29,534 [INFO] 
+02:19:29,535 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:19:29.534
+02:19:29,535 [INFO] !MESSAGE 2023-10-19 02:19:29,534 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Studio update p2 url is overwriten by parameter -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest
+02:19:29,535 [INFO] 
+02:19:29,718 [INFO] 
+02:19:29,718 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:19:29.718
+02:19:29,718 [INFO] !MESSAGE 2023-10-19 02:19:29,718 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Force profile OS check: -Dtalend.studio.p2.profileOS.check=true
+02:19:29,718 [INFO] 
+02:19:31,144 [INFO] 
+02:19:31,144 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:19:31.144
+02:19:31,144 [INFO] !MESSAGE Checking for update...
+02:19:49,084 [INFO] 
+02:19:49,084 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:19:49.083
+02:19:49,084 [INFO] !MESSAGE Commandline is update to date.
+02:19:49,084 [INFO] Start to check local patches....
+02:19:49,647 [INFO] 
+02:19:49,648 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:19:49.607
+02:19:49,648 [INFO] !MESSAGE 2023-10-19 02:19:49,605 INFO  org.talend.datacleansing.core.CleansingActivator  - Starting Talend Data Profiler platform.
+02:19:49,648 [INFO] 
+02:19:49,663 [INFO] 
+02:19:49,663 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:19:49.649
+02:19:49,663 [INFO] !MESSAGE 2023-10-19 02:19:49,647 WARN  org.talend.resource.ResourceManager  - The project can not get it from Project manager so that use default one
+02:19:49,663 [INFO] 
+02:19:49,704 [INFO] 
+02:19:49,704 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:19:49.691
+02:19:49,704 [INFO] !MESSAGE 2023-10-19 02:19:49,690 WARN  org.talend.resource.ResourceManager  - The project can not get it from Project manager so that use default one
+02:19:49,704 [INFO] 
+02:19:50,953 [INFO] COMPLETED at Thu Oct 19 02:19:50 GMT 2023
+02:19:50,953 [INFO] 
+02:19:50,953 [INFO] 
+02:19:50,953 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:19:50.953
+02:19:50,953 [INFO] !MESSAGE initLocal
+02:19:50,953 [INFO] 
+02:19:50,953 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:19:50.953
+02:19:50,953 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:19:50 GMT 2023
+02:19:50,953 [INFO] 
+02:19:53,875 [INFO] COMPLETED at Thu Oct 19 02:19:53 GMT 2023
+02:19:53,875 [INFO] 
+02:19:53,875 [INFO] 
+02:19:53,875 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:19:53.875
+02:19:53,875 [INFO] !MESSAGE createProject
+02:19:53,875 [INFO] 
+02:19:53,875 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:19:53.875
+02:19:53,875 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:19:53 GMT 2023
+02:19:53,875 [INFO] 
+02:19:54,249 [INFO] COMPLETED at Thu Oct 19 02:19:54 GMT 2023
+02:19:54,250 [INFO] 
+02:19:54,250 [INFO] 
+02:19:54,250 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:19:54.233
+02:19:54,250 [INFO] !MESSAGE logoffProject
+02:19:54,250 [INFO] 
+02:19:54,250 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:19:54.236
+02:19:54,250 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:19:54 GMT 2023
+02:19:54,250 [INFO] 
+02:19:54,455 [INFO] 
+02:19:54,455 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:19:54.453
+02:19:54,455 [INFO] !MESSAGE Shutting down Command Line Application
+02:19:56,266 [INFO] 
+02:19:56,267 [INFO] *****************************************************
+02:19:56,267 [INFO] Starting to generate sources
+02:19:56,267 [INFO] 
+02:19:56,267 [INFO] Generating commandline script...
+02:19:56,270 [INFO] Prepare command to generating code for :CONTAINERCICDCLOUD test-0.1.0 (0.1,Job Designs)
+02:19:56,271 [INFO] Executing script...
+02:19:56,275 [INFO] 
+02:19:56,275 [INFO] Exec java -ea -Xms512m -Dfile.encoding=UTF-8 -Xmx2000m -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.security.pkcs=ALL-UNNAMED --add-opens=java.base/sun.security.x509=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-modules=ALL-SYSTEM -Dmaven.local.repository=C:\Windows\system32\config\systemprofile\.m2\repository -Dci.mode=true -Dtalend.job.applyContextToChildren=true -Dmaven.repository=global -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest -classpath C:\Windows\system32\config\systemprofile\.installation\.commandline_8\plugins\org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar org.eclipse.core.launcher.Main -application org.talend.commandline.CommandLine -consolelog -data C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend scriptFile script_command_6199451505454840303.txt
+02:19:56,275 [INFO] loadScript, loaded temp command script file: C:\Windows\TEMP\script_command_6199451505454840303.txt
+02:19:56,320 [ERROR] Picked up JAVA_TOOL_OPTIONS: -Dmaven.ext.class.path="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca" 
+02:20:12,017 [INFO] !SESSION 2023-10-19 02:19:56.778 -----------------------------------------------
+02:20:12,017 [INFO] eclipse.buildId=unknown
+02:20:12,018 [INFO] java.version=11.0.14
+02:20:12,018 [INFO] java.vendor=Oracle Corporation
+02:20:12,018 [INFO] BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+02:20:12,018 [INFO] Framework arguments:  -application org.talend.commandline.CommandLine scriptFile script_command_6199451505454840303.txt
+02:20:12,018 [INFO] Command-line arguments:  -application org.talend.commandline.CommandLine -consolelog -data C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend scriptFile script_command_6199451505454840303.txt
+02:20:12,018 [INFO] 
+02:20:12,018 [INFO] !ENTRY org.eclipse.emf.ecore 2 0 2023-10-19 02:20:12.016
+02:20:12,018 [INFO] !MESSAGE Both 'org.talend.designer.unitemap' and 'org.talend.designer.unitemap' register a package for 'http://www.talend.org/unitemap'
+02:20:12,024 [INFO] 
+02:20:12,025 [INFO] !ENTRY org.eclipse.emf.ecore 2 0 2023-10-19 02:20:12.025
+02:20:12,025 [INFO] !MESSAGE Both 'org.talend.model' and 'org.talend.model' register a package for 'http://www.talend.org/component_cache'
+02:20:13,702 [INFO] 
+02:20:13,702 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:13.701
+02:20:13,702 [INFO] !MESSAGE 2023-10-19 02:20:13,696 INFO  org.talend.commandline.CommandLineApplication  - 
+02:20:13,702 [INFO] !!------------------------------------------------------------------------------!!
+02:20:13,702 [INFO] !!                                                                              !!
+02:20:13,702 [INFO] !!                                    TALEND                                    !!
+02:20:13,702 [INFO] !!   Starting Talend's platform log system.VERSION= 8.0.1.20230913_0925-patch   !!
+02:20:13,703 [INFO] !!                                                                              !!
+02:20:13,703 [INFO] !!------------------------------------------------------------------------------!!
+02:20:13,703 [INFO] 
+02:20:13,715 [INFO] 
+02:20:13,716 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:20:13.716
+02:20:13,716 [INFO] !MESSAGE Starting up Command Line Application
+02:20:13,717 [INFO] 
+02:20:13,719 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:13.719
+02:20:13,719 [INFO] !MESSAGE 2023-10-19 02:20:13,717 INFO  org.talend.utils.StudioKeysFileCheck  - encryptionKeyFilePath: C:\Windows\System32\config\systemprofile\.installation\.commandline_8\configuration\studio.keys
+02:20:13,719 [INFO] 
+02:20:16,152 [INFO] 
+02:20:16,153 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:16.152
+02:20:16,153 [INFO] !MESSAGE 2023-10-19 02:20:16,151 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Studio base p2 url is overwrited by: -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base
+02:20:16,153 [INFO] 
+02:20:16,154 [INFO] 
+02:20:16,155 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:16.155
+02:20:16,155 [INFO] !MESSAGE 2023-10-19 02:20:16,154 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Studio update p2 url is overwriten by parameter -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest
+02:20:16,156 [INFO] 
+02:20:16,382 [INFO] 
+02:20:16,383 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:16.381
+02:20:16,383 [INFO] !MESSAGE 2023-10-19 02:20:16,380 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Force profile OS check: -Dtalend.studio.p2.profileOS.check=true
+02:20:16,383 [INFO] 
+02:20:17,574 [INFO] 
+02:20:17,575 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:20:17.574
+02:20:17,575 [INFO] !MESSAGE Checking for update...
+02:20:34,923 [INFO] 
+02:20:34,923 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:20:34.923
+02:20:34,923 [INFO] !MESSAGE Commandline is update to date.
+02:20:34,931 [INFO] Start to check local patches....
+02:20:35,311 [INFO] 
+02:20:35,311 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:35.285
+02:20:35,311 [INFO] !MESSAGE 2023-10-19 02:20:35,284 INFO  org.talend.datacleansing.core.CleansingActivator  - Starting Talend Data Profiler platform.
+02:20:35,311 [INFO] 
+02:20:35,335 [INFO] 
+02:20:35,335 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:20:35.334
+02:20:35,336 [INFO] !MESSAGE 2023-10-19 02:20:35,333 WARN  org.talend.resource.ResourceManager  - The project can not get it from Project manager so that use default one
+02:20:35,336 [INFO] 
+02:20:35,365 [INFO] 
+02:20:35,366 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:20:35.339
+02:20:35,366 [INFO] !MESSAGE 2023-10-19 02:20:35,338 WARN  org.talend.resource.ResourceManager  - The project can not get it from Project manager so that use default one
+02:20:35,366 [INFO] 
+02:20:36,375 [INFO] COMPLETED at Thu Oct 19 02:20:36 GMT 2023
+02:20:36,375 [INFO] 
+02:20:36,375 [INFO] 
+02:20:36,375 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:20:36.375
+02:20:36,375 [INFO] !MESSAGE initLocal
+02:20:36,379 [INFO] 
+02:20:36,380 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:20:36.379
+02:20:36,380 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:20:36 GMT 2023
+02:20:36,380 [INFO] 
+02:20:37,685 [INFO] 
+02:20:37,685 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:37.674
+02:20:37,685 [INFO] !MESSAGE 2023-10-19 02:20:37,674 INFO  org.talend.commons.exception.CommonExceptionHandler  - org.talend.commons.utils.network.TalendProxySelector:-Dtalend.studio.proxy.excludeLoopbackAutomatically=true, adding missing loopback addresses into http.nonProxyHosts: [localhost, 0:0:0:0:0:0:0:1, 127.0.0.1]
+02:20:37,685 [INFO] 
+02:20:37,685 [INFO] 
+02:20:37,685 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:37.674
+02:20:37,685 [INFO] !MESSAGE 2023-10-19 02:20:37,674 INFO  org.talend.commons.exception.CommonExceptionHandler  - org.talend.commons.utils.network.TalendProxySelector:-Dtalend.studio.proxy.excludeLoopbackAutomatically=true, adding missing loopback addresses into https.nonProxyHosts: [localhost, 0:0:0:0:0:0:0:1, 127.0.0.1]
+02:20:37,685 [INFO] 
+02:20:39,652 [INFO] 
+02:20:39,655 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:39.653
+02:20:39,655 [INFO] !MESSAGE 2023-10-19 02:20:39,651 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-bundle, version=8.0.1.20230810_0855, classifier=null, type=pom, componentType=0] was already installed
+02:20:39,655 [INFO] 
+02:20:39,657 [INFO] 
+02:20:39,658 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:39.657
+02:20:39,658 [INFO] !MESSAGE 2023-10-19 02:20:39,656 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-docker, version=8.0.1.20230905_0230, classifier=null, type=pom, componentType=0] was already installed
+02:20:39,658 [INFO] 
+02:20:39,660 [INFO] 
+02:20:39,661 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:39.661
+02:20:39,661 [INFO] !MESSAGE 2023-10-19 02:20:39,660 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-karaf, version=8.0.1.20230630_0809, classifier=null, type=pom, componentType=0] was already installed
+02:20:39,661 [INFO] 
+02:20:39,664 [INFO] 
+02:20:39,664 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:39.664
+02:20:39,665 [INFO] !MESSAGE 2023-10-19 02:20:39,663 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-lite, version=8.0.1.20230913_0925, classifier=null, type=pom, componentType=0] was already installed
+02:20:39,665 [INFO] 
+02:20:39,667 [INFO] 
+02:20:39,668 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:39.668
+02:20:39,668 [INFO] !MESSAGE 2023-10-19 02:20:39,666 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-osgici, version=8.0.1.20230912_1742, classifier=null, type=pom, componentType=0] was already installed
+02:20:39,668 [INFO] 
+02:20:39,672 [INFO] 
+02:20:39,672 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:39.672
+02:20:39,672 [INFO] !MESSAGE 2023-10-19 02:20:39,672 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tck, version=8.0.1.20230913_0925, classifier=null, type=pom, componentType=0] was already installed
+02:20:39,672 [INFO] 
+02:20:39,672 [INFO] 
+02:20:39,672 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:39.672
+02:20:39,672 [INFO] !MESSAGE 2023-10-19 02:20:39,672 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tcksdk, version=8.0.1.20230913_0925, classifier=null, type=pom, componentType=0] was already installed
+02:20:39,672 [INFO] 
+02:20:39,672 [INFO] 
+02:20:39,672 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:39.672
+02:20:39,672 [INFO] !MESSAGE 2023-10-19 02:20:39,672 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tcompv0, version=8.0.1.20230913_0925, classifier=null, type=pom, componentType=0] was already installed
+02:20:39,672 [INFO] 
+02:20:40,126 [INFO] 
+02:20:40,127 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:40.127
+02:20:40,127 [INFO] !MESSAGE 2023-10-19 02:20:40,093 INFO  org.talend.sdk.component.studio.ProcessManager  - Local addresses passed to sdk: [127.0.0.1, [0:0:0:0:0:0:0:1]]
+02:20:40,127 [INFO] 
+02:20:45,264 [INFO] 
+02:20:45,264 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:20:45.233
+02:20:45,264 [INFO] !MESSAGE 2023-10-19 02:20:45,224 WARN  org.talend.sdk.component.studio.logging.JULToOsgiHandler  - [org.talend.sdk.component.server.service.ComponentManagerService.init] No system property 'jdk.serialFilter', ensure it is intended
+02:20:45,264 [INFO] 
+02:20:48,605 [INFO] Component server not yet ready, will wait again
+02:20:49,831 [INFO] 
+02:20:49,831 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:20:49.830
+02:20:49,831 [INFO] !MESSAGE 2023-10-19 02:20:49,829 INFO  org.talend.sdk.component.studio.ProcessManager  - Succeed to connect [http://127.0.0.1:50971/api/v1/environment]
+02:20:49,831 [INFO] 
+02:20:59,167 [ERROR] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+02:20:59,167 [ERROR] SLF4J: Defaulting to no-operation (NOP) logger implementation
+02:20:59,167 [ERROR] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+02:21:13,075 [INFO] 
+02:21:13,075 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:21:13.075
+02:21:13,075 [INFO] !MESSAGE 2023-10-19 02:21:13,074 INFO  org.talend.core.repository.model.ProxyRepositoryFactory  - jobbuilder@talend.com logged on containercicdcloud
+02:21:13,075 [INFO] 
+02:21:14,372 [INFO] 
+02:21:14,372 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:21:14.346
+02:21:14,372 [INFO] !MESSAGE 2023-10-19 02:21:14,341 INFO  org.talend.designer.codegen.components.model.ComponentsLoader  - allSet size: 1021, total: 1021
+02:21:14,372 [INFO] 
+02:21:23,722 [INFO] 
+02:21:23,723 [INFO] !ENTRY org.talend.platform.logging 1 0 2023-10-19 02:21:23.722
+02:21:23,723 [INFO] !MESSAGE 2023-10-19 02:21:23,721 INFO  org.talend.designer.codegen.components.model.ComponentsFactory  - 1187 components loaded in 10151 ms
+02:21:23,723 [INFO] 
+02:21:25,833 [INFO] COMPLETED at Thu Oct 19 02:21:25 GMT 2023
+02:21:25,834 [INFO] 
+02:21:25,834 [INFO] 
+02:21:25,834 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:21:25.834
+02:21:25,834 [INFO] !MESSAGE logonProject
+02:21:25,835 [INFO] 
+02:21:25,835 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:21:25.835
+02:21:25,835 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:21:25 GMT 2023
+02:21:25,835 [INFO] 
+02:21:30,229 [INFO] 
+02:21:30,229 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:21:30.227
+02:21:30,229 [INFO] !MESSAGE 2023-10-19 02:21:30,225 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: camel-azure
+02:21:30,229 [INFO] 
+02:21:30,765 [INFO] 
+02:21:30,766 [INFO] !ENTRY org.talend.platform.logging 2 0 2023-10-19 02:21:30.765
+02:21:30,766 [INFO] !MESSAGE 2023-10-19 02:21:30,764 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: camel-aws-mq
+02:21:30,766 [INFO] 
+02:21:42,253 [INFO] COMPLETED at Thu Oct 19 02:21:42 GMT 2023
+02:21:42,253 [INFO] 
+02:21:42,253 [INFO] 
+02:21:42,254 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:21:42.253
+02:21:42,254 [INFO] !MESSAGE buildItemSources
+02:21:42,254 [INFO] 
+02:21:42,254 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:21:42.254
+02:21:42,255 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:21:42 GMT 2023
+02:21:42,256 [INFO] 
+02:21:42,429 [INFO] COMPLETED at Thu Oct 19 02:21:42 GMT 2023
+02:21:42,429 [INFO] 
+02:21:42,430 [INFO] 
+02:21:42,430 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:21:42.430
+02:21:42,430 [INFO] !MESSAGE logoffProject
+02:21:42,432 [INFO] 
+02:21:42,432 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:21:42.431
+02:21:42,432 [INFO] !MESSAGE COMPLETED at Thu Oct 19 02:21:42 GMT 2023
+02:21:42,432 [INFO] 
+02:21:42,536 [INFO] 
+02:21:42,536 [INFO] !ENTRY org.talend.commandline 1 0 2023-10-19 02:21:42.535
+02:21:42,536 [INFO] !MESSAGE Shutting down Command Line Application
+02:21:44,570 [INFO] Script execution finished.
+02:21:44,571 [INFO] Successfully generated sources
+02:21:44,571 [INFO] 
+02:21:44,571 [INFO] Finished to generate the code
+02:21:44,571 [INFO] *****************************************************
+02:21:44,578 [INFO] 
+02:21:44,578 [INFO] ------------< org.example.containercicdcloud.code:routines >------------
+02:21:44,578 [INFO] Building CONTAINERCICDCLOUD Routines 8.0.1                         [2/3]
+02:21:44,579 [INFO]   from code\routines\pom.xml
+02:21:44,579 [INFO] --------------------------------[ jar ]---------------------------------
+02:21:45,372 [INFO] 
+02:21:45,372 [INFO] --- clean:3.0.0:clean (default-clean) @ routines ---
+02:21:45,376 [INFO] Deleting C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms\code\routines\target
+02:21:45,508 [INFO] 
+02:21:45,508 [INFO] --- builder:8.0.12:generate (default) @ routines ---
+02:21:45,514 [INFO] 
+02:21:45,514 [INFO] --- resources:3.0.2:resources (default-resources) @ routines ---
+02:21:46,006 [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+02:21:46,014 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+02:21:46,031 [INFO] Copying 1 resource
+02:21:46,048 [INFO] 
+02:21:46,048 [INFO] --- compiler:3.6.1:compile (default-compile) @ routines ---
+02:21:46,381 [INFO] Downloading from talend-custom-libs-release: http://localhost:8081/repository/talend-custom-libs-release/org/eclipse/platform/org.eclipse.osgi/maven-metadata.xml
+02:21:48,467 [WARNING] Could not transfer metadata org.eclipse.platform:org.eclipse.osgi/maven-metadata.xml from/to talend-custom-libs-release (http://localhost:8081/repository/talend-custom-libs-release/): Connect to localhost:8081 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+02:21:49,595 [INFO] Changes detected - recompiling the module!
+02:21:49,602 [INFO] Compiling 104 source files to C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms\code\routines\target\classes
+02:21:53,152 [INFO] 
+02:21:53,152 [INFO] --- resources:3.0.2:testResources (default-testResources) @ routines ---
+02:21:53,160 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+02:21:53,162 [INFO] Copying 0 resource
+02:21:53,164 [INFO] 
+02:21:53,164 [INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ routines ---
+02:21:53,196 [INFO] Nothing to compile - all classes are up to date
+02:21:53,200 [INFO] 
+02:21:53,200 [INFO] --- surefire:2.22.2:test (default-test) @ routines ---
+02:21:53,460 [INFO] 
+02:21:53,460 [INFO] --- jar:3.0.2:jar (default-jar) @ routines ---
+02:21:54,091 [INFO] Building jar: C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms\code\routines\target\routines-8.0.1.jar
+02:21:54,239 [INFO] 
+02:21:54,239 [INFO] --------------< org.example.containercicdcloud.job:test >---------------
+02:21:54,239 [INFO] Building CONTAINERCICDCLOUD test-0.1.0 (0.1,Job Designs) 0.1.0     [3/3]
+02:21:54,239 [INFO]   from jobs\process\test_0.1\pom.xml
+02:21:54,239 [INFO] --------------------------------[ jar ]---------------------------------
+02:21:54,297 [INFO] 
+02:21:54,297 [INFO] --- clean:3.0.0:clean (default-clean) @ test ---
+02:21:54,299 [INFO] Deleting C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms\jobs\process\test_0.1\target
+02:21:54,303 [INFO] 
+02:21:54,303 [INFO] --- builder:8.0.12:generate (default) @ test ---
+02:21:54,307 [INFO] 
+02:21:54,307 [INFO] --- resources:3.0.2:resources (default-resources) @ test ---
+02:21:54,310 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+02:21:54,313 [INFO] Copying 1 resource
+02:21:54,321 [INFO] 
+02:21:54,321 [INFO] --- compiler:3.6.1:compile (default-compile) @ test ---
+02:21:54,329 [INFO] Changes detected - recompiling the module!
+02:21:54,333 [INFO] Compiling 1 source file to C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms\jobs\process\test_0.1\target\classes
+02:21:54,767 [INFO] 
+02:21:54,767 [INFO] --- resources:3.0.2:testResources (default-testResources) @ test ---
+02:21:54,771 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+02:21:54,782 [INFO] Copying 0 resource
+02:21:54,783 [INFO] 
+02:21:54,783 [INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ test ---
+02:21:54,795 [INFO] Nothing to compile - all classes are up to date
+02:21:54,797 [INFO] 
+02:21:54,797 [INFO] --- surefire:2.22.2:test (default-test) @ test ---
+02:21:54,812 [INFO] 
+02:21:54,813 [INFO] --- jar:3.0.2:jar (default-jar) @ test ---
+02:21:54,828 [INFO] Building jar: C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms\jobs\process\test_0.1\target\test_0_1.jar
+02:21:54,870 [INFO] 
+02:21:54,871 [INFO] --- assembly:3.6.0:single (default) @ test ---
+02:21:54,922 [INFO] Downloading from central-maven: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-io/3.4.0/plexus-io-3.4.0.pom
+02:21:55,643 [INFO] Downloaded from central-maven: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-io/3.4.0/plexus-io-3.4.0.pom (6.0 kB at 8.3 kB/s)
+02:21:55,657 [INFO] Downloading from central-maven: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-archiver/4.4.0/plexus-archiver-4.4.0.pom
+02:21:55,836 [INFO] Downloaded from central-maven: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-archiver/4.4.0/plexus-archiver-4.4.0.pom (6.3 kB at 35 kB/s)
+02:21:56,428 [INFO] Reading assembly descriptor: C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms\jobs\process\test_0.1/src/main/assemblies/assembly.xml
+02:21:56,900 [INFO] Building zip: C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend\CONTAINERCICDCLOUD\poms\jobs\process\test_0.1\target\test_0_1.zip
+02:21:57,303 [INFO] 
+02:21:57,303 [INFO] --- signer:8.0.6:sign (sign) @ test ---
+02:21:57,367 [INFO] Start to sign the job artifact
+02:21:57,368 [INFO] Start to sign artifact, the source file is test_0_1.zip and target file is test_0_1_sign_.zip
+02:21:57,731 [INFO] ------------------------------------------------------------------------
+02:21:57,731 [INFO] Reactor Summary:
+02:21:57,731 [INFO] 
+02:21:57,732 [INFO] CONTAINERCICDCLOUD Codes Master 8.0.1 .............. SUCCESS [02:38 min]
+02:21:57,732 [INFO] CONTAINERCICDCLOUD Routines 8.0.1 .................. SUCCESS [  9.659 s]
+02:21:57,732 [INFO] CONTAINERCICDCLOUD test-0.1.0 (0.1,Job Designs) 0.1.0 SUCCESS [  3.492 s]
+02:21:57,732 [INFO] ------------------------------------------------------------------------
+02:21:57,732 [INFO] BUILD SUCCESS
+02:21:57,732 [INFO] ------------------------------------------------------------------------
+02:21:57,733 [INFO] Total time:  02:51 min
+02:21:57,733 [INFO] Finished at: 2023-10-19T02:21:57Z
+02:21:57,733 [INFO] ------------------------------------------------------------------------
+02:21:57,738 [INFO] [jenkins-event-spy] Generated C:\ProgramData\Jenkins\.jenkins\workspace\SimpleTalend@tmp\withMaven6f2306ca\maven-spy-20231019-021905-3782919736777127116040.log
+[Pipeline] }
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\pom.xml under org\example\containercicdcloud\code.Master\8.0.1\code.Master-8.0.1.pom
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\code\routines\pom.xml under org\example\containercicdcloud\code\routines\8.0.1\routines-8.0.1.pom
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\code\routines\target\routines-8.0.1.jar under org\example\containercicdcloud\code\routines\8.0.1\routines-8.0.1.jar
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\jobs\process\test_0.1\pom.xml under org\example\containercicdcloud\job\test\0.1.0\test-0.1.0.pom
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\jobs\process\test_0.1\target\test_0_1.jar under org\example\containercicdcloud\job\test\0.1.0\test-0.1.0.jar
+[withMaven] artifactsPublisher - Archive artifact CONTAINERCICDCLOUD\poms\jobs\process\test_0.1\target\test_0_1.zip under org\example\containercicdcloud\job\test\0.1.0\test-0.1.0.zip
+[withMaven] junitPublisher - Archive test results for Maven artifact org.example.containercicdcloud.code:routines:jar:8.0.1 generated by maven-surefire-plugin:test (default-test): CONTAINERCICDCLOUD\poms\code\routines\target\surefire-reports\*.xml
+[withMaven] junitPublisher - Archive test results for Maven artifact org.example.containercicdcloud.job:test:jar:0.1.0 generated by maven-surefire-plugin:test (default-test): CONTAINERCICDCLOUD\poms\jobs\process\test_0.1\target\surefire-reports\*.xml
+Recording test results
+No test report files were found. Configuration error?
+None of the test reports contained any result
+[withMaven] Jenkins Task Scanner Plugin not found, don't display results of source code scanning for 'TODO' and 'FIXME' in pipeline screen.
+[withMaven] Publishers: Pipeline Graph Publisher: 14 ms, Generated Artifacts Publisher: 111 ms, Junit Publisher: 7 ms, Open Task Scanner Publisher: 2 ms
+[Pipeline] // withMaven
+[Pipeline] echo
+buildJobs - done
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
