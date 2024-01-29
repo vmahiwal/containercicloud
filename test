@@ -2,3 +2,392 @@ LDOBAITALEND_QXuG1uN78kZoG3tPoLtzqXR7PuqIRcCxpGbqBfyHVPox9SIc84x3nwa4OaRJwX+zAVx
 
 
 mvn -X org.talend.ci:builder-maven-plugin:8.0.12:install -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/R2023-12 -Dlicense.path=C:/Talend/license/lic_trbd.txt
+
+
+
+
+
+C:\Users\student\workspace\LOCAL_PROJECT\poms\jobs\process\readme_0.1>mvn -X org.talend.ci:builder-maven-plugin:8.0.12:install -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/R2023-12 -Dlicense.path="C:/Talend/Talend-Studio-V8.0.1/license"
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: C:\Program Files\apache-maven-3.6.3\bin\..
+Java version: 11.0.14, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-11.0.14
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows server 2016", version: "10.0", arch: "amd64", family: "windows"
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: javax.annotation.* < plexus.core
+[DEBUG]   Imported: javax.annotation.security.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.inject.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.util.* < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.fusesource.jansi.* < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: org.slf4j.event.* < plexus.core
+[DEBUG]   Imported: org.slf4j.helpers.* < plexus.core
+[DEBUG]   Imported: org.slf4j.spi.* < plexus.core
+[DEBUG] Populating class realm maven.api
+[INFO] Error stacktraces are turned on.
+[DEBUG] Message scheme: color
+[DEBUG] Message styles: debug info warning error success failure strong mojo project
+[DEBUG] Reading global settings from C:\Program Files\apache-maven-3.6.3\bin\..\conf\settings.xml
+[DEBUG] Reading user settings from C:\Users\student\.m2\settings.xml
+[DEBUG] Reading global toolchains from C:\Program Files\apache-maven-3.6.3\bin\..\conf\toolchains.xml
+[DEBUG] Reading user toolchains from C:\Users\student\.m2\toolchains.xml
+[DEBUG] Using local repository at C:\Users\student\.m2\repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for C:\Users\student\.m2\repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project org.example.di_demos.job:readme:jar:0.1.0: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project org.example.di_demos:code.Master:pom:8.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: org.example.di_demos.job:readme:jar:0.1.0
+[DEBUG] Tasks:   [org.talend.ci:builder-maven-plugin:8.0.12:install]
+[DEBUG] Style:   Aggregating
+[DEBUG] =======================================================================
+[INFO]
+[INFO] ------------------< org.example.di_demos.job:readme >-------------------
+[INFO] Building LOCAL_PROJECT readme-0.1.0 (0.1,Job Designs) 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       org.example.di_demos.job:readme:0.1.0
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] Repositories (dependencies): [central-talend (https://talend-update.talend.com/nexus/content/repositories/libraries/, default, releases+snapshots), talend.oss.releases (https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease/, default, releases+snapshots), central-maven (https://repo1.maven.org/maven2/, default, releases+snapshots), talend-custom-libs-release (http://localhost:8081/repository/talend-custom-libs-release/, default, releases+snapshots), talend-custom-libs-snapshot (http://localhost:8081/repository/talend-custom-libs-snapshot/, default, releases+snapshots), maven-public (http://localhost:8081/repository/maven-public/, default, releases+snapshots), central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central-maven (https://repo1.maven.org/maven2/, default, releases+snapshots), talend.oss.releases (https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease/, default, releases+snapshots), central-talend (https://talend-update.talend.com/nexus/content/repositories/libraries/, default, releases+snapshots), talend-custom-libs-release (http://localhost:8081/repository/talend-custom-libs-release/, default, releases+snapshots), maven-public (http://localhost:8081/repository/maven-public/, default, releases+snapshots), central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.talend.ci:builder-maven-plugin:8.0.12:install (default-cli)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <baseP2Pwd>${talend.studio.p2.base.pwd}</baseP2Pwd>
+  <baseP2User>${talend.studio.p2.base.user}</baseP2User>
+  <branchName default-value="">${talend.project.branch}</branchName>
+  <commandlineHost default-value="localhost">${commandline.host}</commandlineHost>
+  <commandlinePort default-value="8002">${commandline.port}</commandlinePort>
+  <commandlineUser default-value="jobbuilder@talend.com">${commandline.user}</commandlineUser>
+  <compNexusPassword>${components.nexus.password}</compNexusPassword>
+  <compNexusRepository>${components.nexus.repository}</compNexusRepository>
+  <compNexusSnapshotRepository>${components.nexus.repository.snapshot}</compNexusSnapshotRepository>
+  <compNexusUrl>${components.nexus.url}</compNexusUrl>
+  <compNexusUser>${components.nexus.user}</compNexusUser>
+  <debug>${debug}</debug>
+  <eclipseDebug>${eclipse.debug}</eclipseDebug>
+  <forceUpdate>${forceUpdate}</forceUpdate>
+  <generationType default-value="server">${generation.type}</generationType>
+  <installerClean>${installer.clean}</installerClean>
+  <jvmArguments default-value="-ea -Xms512m -Dfile.encoding=UTF-8 -Xmx2000m -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication">${jvm.arguments}</jvmArguments>
+  <keyRingPath>${eclipse.keyring}</keyRingPath>
+  <licensePassword>${license.remote.password}</licensePassword>
+  <licensePath>${license.path}</licensePath>
+  <licenseUser>${license.remote.user}</licenseUser>
+  <masterKeyPath>${eclipse.password}</masterKeyPath>
+  <p2InstallerPath default-value="${user.home}/.installation/.p2Installer_8">${p2Installer.path}</p2InstallerPath>
+  <p2Origin>${talend.studio.p2.base}</p2Origin>
+  <p2Update>${talend.studio.p2.update}</p2Update>
+  <patchPassword>${patch.remote.password}</patchPassword>
+  <patchPath>${patch.path}</patchPath>
+  <patchUser>${patch.remote.user}</patchUser>
+  <productPath default-value="${user.home}/.installation/.commandline_8">${product.path}</productPath>
+  <session default-value="${session}"/>
+  <skip default-value="false">${ci.builder.skip}</skip>
+  <skipCommandline default-value="false">${commandline.skip}</skipCommandline>
+  <targetOs>${target.os}</targetOs>
+  <updateP2Pwd>${talend.studio.p2.update.pwd}</updateP2Pwd>
+  <updateP2User>${talend.studio.p2.update.user}</updateP2User>
+  <updatesitePath>${updatesite.path}</updatesitePath>
+  <userDir default-value="${user.dir}"/>
+  <workSpace>${workspace}</workSpace>
+</configuration>
+[DEBUG] =======================================================================
+[INFO]
+[INFO] --- builder-maven-plugin:8.0.12:install (default-cli) @ readme ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=930041, ConflictMarker.markTime=381699, ConflictMarker.nodeCount=9, ConflictIdSorter.graphTime=559980, ConflictIdSorter.topsortTime=492484, ConflictIdSorter.conflictIdCount=8, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=3820244, ConflictResolver.conflictItemCount=9, DefaultDependencyCollector.collectTime=137742448, DefaultDependencyCollector.transformTime=9105839}
+[DEBUG] org.talend.ci:builder-maven-plugin:jar:8.0.12
+[DEBUG]    commons-codec:commons-codec:jar:1.15:runtime
+[DEBUG]    org.sonatype.plexus:plexus-sec-dispatcher:jar:1.4:compile
+[DEBUG]    org.codehaus.plexus:plexus-cipher:jar:1.8:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.24:compile
+[DEBUG]    commons-lang:commons-lang:jar:2.6:compile
+[DEBUG]    commons-io:commons-io:jar:2.8.0:compile
+[DEBUG]    org.apache.commons:commons-lang3:jar:3.9:compile
+[DEBUG] Created new class realm plugin>org.talend.ci:builder-maven-plugin:8.0.12
+[DEBUG] Importing foreign packages into class realm plugin>org.talend.ci:builder-maven-plugin:8.0.12
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.talend.ci:builder-maven-plugin:8.0.12
+[DEBUG]   Included: org.talend.ci:builder-maven-plugin:jar:8.0.12
+[DEBUG]   Included: commons-codec:commons-codec:jar:1.15
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-cipher:jar:1.8
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.24
+[DEBUG]   Included: commons-lang:commons-lang:jar:2.6
+[DEBUG]   Included: commons-io:commons-io:jar:2.8.0
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.9
+[DEBUG] Configuring mojo org.talend.ci:builder-maven-plugin:8.0.12:install from plugin realm ClassRealm[plugin>org.talend.ci:builder-maven-plugin:8.0.12, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@2cdf8d8a]
+[DEBUG] Configuring mojo 'org.talend.ci:builder-maven-plugin:8.0.12:install' with basic configurator -->
+[DEBUG]   (f) commandlineHost = localhost
+[DEBUG]   (f) commandlinePort = 8002
+[DEBUG]   (f) commandlineUser = jobbuilder@talend.com
+[DEBUG]   (f) generationType = server
+[DEBUG]   (f) jvmArguments = -ea -Xms512m -Dfile.encoding=UTF-8 -Xmx2000m -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication
+[DEBUG]   (f) licensePath = C:/Talend/Talend-Studio-V8.0.1/license
+[DEBUG]   (f) p2InstallerPath = C:\Users\student/.installation/.p2Installer_8
+[DEBUG]   (f) p2Origin = https://update.talend.com/Studio/8/base
+[DEBUG]   (f) p2Update = https://update.talend.com/Studio/8/updates/R2023-12
+[DEBUG]   (f) patchPath = []
+[DEBUG]   (f) productPath = C:\Users\student/.installation/.commandline_8
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@2b56f5f8
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) skipCommandline = false
+[DEBUG]   (f) userDir = C:\Users\student\workspace\LOCAL_PROJECT\poms\jobs\process\readme_0.1
+[DEBUG] -- end configuration --
+[INFO] commandlineWorkspace: C:\Users\student\workspace\LOCAL_PROJECT\poms\jobs\process\readme_0.1
+[INFO]
+[INFO] *****************************************************
+[INFO]
+[INFO] Resolve patches...
+[INFO] talend.studio.p2.update: https://update.talend.com/Studio/8/updates/R2023-12
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/updates/R2023-12/compositeContent.xml to: C:\Users\student\AppData\Local\Temp\2\compositeContent.xml9129010617378195235\compositeContent.xml
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/updates/R2023-12/patch.properties to: C:\Users\student\AppData\Local\Temp\2\patch.properties3136325915660517523\patch.properties
+[INFO]
+[INFO] Cleaning up existing P2Installer and Commandline installation...
+[INFO]
+[INFO] -----------------------------------------------------
+[INFO] Start to install Commandline...
+[INFO]
+[INFO] Init P2Installer plugins...
+[INFO] Get P2Installer plugins from updatesite...
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/com.ibm.icu_67.1.0.v20200706-1749.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\com.ibm.icu_67.1.0.v20200706-1749.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/com.jcraft.jsch_0.1.55.v20190404-1902.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\com.jcraft.jsch_0.1.55.v20190404-1902.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.apache.commons.codec_1.14.0.v20200818-1422.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.apache.commons.codec_1.14.0.v20200818-1422.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.apache.commons.io_2.8.0.v20210415-0900.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.apache.commons.io_2.8.0.v20210415-0900.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.apache.commons.logging_1.2.0.v20180409-1502.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.apache.commons.logging_1.2.0.v20180409-1502.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.apache.felix.gogo.command_1.1.2.v20210111-1007.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.apache.felix.gogo.command_1.1.2.v20210111-1007.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.apache.felix.gogo.runtime_1.1.4.v20210111-1007.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.apache.felix.gogo.runtime_1.1.4.v20210111-1007.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.apache.felix.gogo.shell_1.1.4.v20210111-1007.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.apache.felix.gogo.shell_1.1.4.v20210111-1007.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.apache.felix.scr_2.1.24.v20200924-1939.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.apache.felix.scr_2.1.24.v20200924-1939.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.apache.httpcomponents.httpclient_4.5.13.v20210128-2225.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.apache.httpcomponents.httpclient_4.5.13.v20210128-2225.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.apache.httpcomponents.httpcore_4.4.14.v20210128-2225.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.apache.httpcomponents.httpcore_4.4.14.v20210128-2225.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.bouncycastle.bcpg_1.65.0.v20200527-1955.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.bouncycastle.bcpg_1.65.0.v20200527-1955.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.bouncycastle.bcprov_1.65.1.v20200529-1514.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.bouncycastle.bcprov_1.65.1.v20200529-1514.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.core.commands_3.10.0.v20210401-0744.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.core.commands_3.10.0.v20210401-0744.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.core.contenttype_3.7.1000.v20210409-1722.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.core.contenttype_3.7.1000.v20210409-1722.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.core.filebuffers_3.7.0.v20210512-1543.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.core.filebuffers_3.7.0.v20210512-1543.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.core.filesystem_1.9.0.v20210419-1155.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.core.filesystem_1.9.0.v20210419-1155.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.core.jobs_3.11.0.v20210420-1453.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.core.jobs_3.11.0.v20210420-1453.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.core.net_1.3.1100.v20210424-0724.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.core.net_1.3.1100.v20210424-0724.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.core.net.linux.x86_64_1.2.500.v20210510-1619.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.core.net.linux.x86_64_1.2.500.v20210510-1619.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.core.net.win32.x86_64_1.1.500.v20190925-1337.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.core.net.win32.x86_64_1.1.500.v20190925-1337.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.core.runtime_3.22.0.v20210506-1025.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.core.runtime_3.22.0.v20210506-1025.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.ecf_3.9.102.v20210409-2301.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.ecf_3.9.102.v20210409-2301.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.ecf.filetransfer_5.1.102.v20210409-2301.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.ecf.filetransfer_5.1.102.v20210409-2301.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.ecf.identity_3.9.402.v20210409-2301.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.ecf.identity_3.9.402.v20210409-2301.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.ecf.provider.filetransfer_3.2.601.v20201025-0700.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.ecf.provider.filetransfer_3.2.601.v20201025-0700.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.ecf.provider.filetransfer.httpclient45_1.0.401.v20210512-0614.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.ecf.provider.filetransfer.httpclient45_1.0.401.v20210512-0614.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.ecf.provider.filetransfer.ssl_1.0.201.v20210409-2301.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.ecf.provider.filetransfer.ssl_1.0.201.v20210409-2301.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.ecf.ssl_1.2.401.v20210409-2301.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.ecf.ssl_1.2.401.v20210409-2301.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.app_1.5.100.v20210212-1143.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.app_1.5.100.v20210212-1143.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.common_3.15.0.v20210518-0604.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.common_3.15.0.v20210518-0604.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.concurrent_1.2.0.v20210202-1157.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.concurrent_1.2.0.v20210202-1157.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.event_1.6.0.v20210212-1143.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.event_1.6.0.v20210212-1143.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.frameworkadmin_2.2.0.v20210315-2042.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.frameworkadmin_2.2.0.v20210315-2042.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.frameworkadmin.equinox_1.2.0.v20210315-2042.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.frameworkadmin.equinox_1.2.0.v20210315-2042.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.2.200.v20210429-1609.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.launcher.gtk.linux.x86_64_1.2.200.v20210429-1609.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.200.v20210429-1609.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.200.v20210429-1609.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.artifact.repository_1.4.100.v20210418-1636.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.artifact.repository_1.4.100.v20210418-1636.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.core_2.7.0.v20210315-2042.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.core_2.7.0.v20210315-2042.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.director_2.5.0.v20210325-0750.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.director_2.5.0.v20210325-0750.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.director.app_1.2.0.v20210315-2042.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.director.app_1.2.0.v20210315-2042.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.engine_2.7.0.v20210328-0514.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.engine_2.7.0.v20210328-0514.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.garbagecollector_1.2.0.v20210316-1209.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.garbagecollector_1.2.0.v20210316-1209.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.jarprocessor_1.2.0.v20210507-0825.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.jarprocessor_1.2.0.v20210507-0825.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.metadata_2.6.0.v20210331-1610.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.metadata_2.6.0.v20210331-1610.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.metadata.repository_1.4.0.v20210315-2228.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.metadata.repository_1.4.0.v20210315-2228.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.operations_2.6.0.v20210315-2228.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.operations_2.6.0.v20210315-2228.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.publisher_1.6.0.v20210322-0909.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.publisher_1.6.0.v20210322-0909.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.publisher.eclipse_1.4.0.v20210421-1159.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.publisher.eclipse_1.4.0.v20210421-1159.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.repository_2.5.100.v20210329-1206.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.repository_2.5.100.v20210329-1206.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.repository.tools_2.3.0.v20210325-0750.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.repository.tools_2.3.0.v20210325-0750.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.touchpoint.eclipse_2.3.0.v20210315-2228.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.touchpoint.eclipse_2.3.0.v20210315-2228.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.touchpoint.natives_1.4.0.v20210326-2048.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.touchpoint.natives_1.4.0.v20210326-2048.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.p2.transport.ecf_1.3.100.v20210329-1206.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.p2.transport.ecf_1.3.100.v20210329-1206.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.preferences_3.8.200.v20210212-1143.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.preferences_3.8.200.v20210212-1143.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.registry_3.10.200.v20210503-1606.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.registry_3.10.200.v20210503-1606.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.security_1.3.600.v20210126-1005.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.security_1.3.600.v20210126-1005.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.security.linux.x86_64_1.1.500.v20210125-1508.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.security.linux.x86_64_1.1.500.v20210125-1508.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.security.win32.x86_64_1.1.200.v20190812-0919.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.security.win32.x86_64_1.1.200.v20190812-0919.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.simpleconfigurator_1.4.0.v20210315-2228.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.simpleconfigurator_1.4.0.v20210315-2228.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.equinox.simpleconfigurator.manipulator_2.2.0.v20210315-2228.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.simpleconfigurator.manipulator_2.2.0.v20210315-2228.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.osgi_3.16.300.v20210525-1715.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.osgi_3.16.300.v20210525-1715.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.osgi.compatibility.state_1.2.400.v20210401-1438.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.osgi.compatibility.state_1.2.400.v20210401-1438.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.osgi.services_3.10.100.v20210324-0936.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.osgi.services_3.10.100.v20210324-0936.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.osgi.util_3.6.0.v20210212-1137.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.osgi.util_3.6.0.v20210212-1137.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.text_3.12.0.v20210512-1644.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.text_3.12.0.v20210512-1644.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.eclipse.update.configurator_3.4.800.v20210415-1314.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.update.configurator_3.4.800.v20210415-1314.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.sat4j.core_2.3.5.v201308161310.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.sat4j.core_2.3.5.v201308161310.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.sat4j.pb_2.3.5.v201404071733.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.sat4j.pb_2.3.5.v201404071733.jar
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/plugins/org.tukaani.xz_1.8.0.v20180207-1613.jar to: C:\Users\student\.installation\.p2Installer_8\plugins\org.tukaani.xz_1.8.0.v20180207-1613.jar
+[INFO] Synchronize P2Installer configuration and p2 files...
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/updates/R2023-12/content.jar to: C:\Users\student\.installation\.commandline_8\configuration\talend\studioLite\metadata\updates\content.jar
+[INFO]
+[INFO] Exec java -ea -Xms512m -Dfile.encoding=UTF-8 -Xmx2000m -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.security.pkcs=ALL-UNNAMED --add-opens=java.base/sun.security.x509=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-modules=ALL-SYSTEM -Dci.mode=true -cp C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar org.eclipse.core.launcher.Main -application org.eclipse.equinox.p2.director -consolelog -installIU org.talend.lite.p2.touchpoint.feature.feature.group -repository https://update.talend.com/Studio/8/base,https://update.talend.com/Studio/8/updates/R2023-12 -destination C:\Users\student\.installation\.p2Installer_8 -tag p2installer -profile profile -profileProperties org.eclipse.update.install.features=true -roaming -p2.os win32 -p2.ws win32
+[INFO] Installing org.talend.lite.p2.touchpoint.feature.feature.group 8.0.1.20230106_0825.
+[INFO] !SESSION 2024-01-29 11:37:38.547 -----------------------------------------------
+[INFO] eclipse.buildId=unknown
+[INFO] java.version=11.0.14
+[INFO] java.vendor=Oracle Corporation
+[INFO] BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+[INFO] Framework arguments:  -application org.eclipse.equinox.p2.director -installIU org.talend.lite.p2.touchpoint.feature.feature.group -repository https://update.talend.com/Studio/8/base,https://update.talend.com/Studio/8/updates/R2023-12 -destination C:\Users\student\.installation\.p2Installer_8 -tag p2installer -profile profile -profileProperties org.eclipse.update.install.features=true -roaming -p2.os win32 -p2.ws win32
+[INFO] Command-line arguments:  -application org.eclipse.equinox.p2.director -consolelog -installIU org.talend.lite.p2.touchpoint.feature.feature.group -repository https://update.talend.com/Studio/8/base,https://update.talend.com/Studio/8/updates/R2023-12 -destination C:\Users\student\.installation\.p2Installer_8 -tag p2installer -profile profile -profileProperties org.eclipse.update.install.features=true -roaming -p2.os win32 -p2.ws win32
+[INFO]
+[INFO] !ENTRY org.eclipse.equinox.p2.director 0 0 2024-01-29 11:37:45.375
+[INFO] !MESSAGE Overall install request is satisfiable
+[INFO] !SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2024-01-29 11:37:45.375
+[INFO] !MESSAGE Add request for Talend Touchpoint Feature 8.0.1.20230106_0825 (org.talend.lite.p2.touchpoint.feature.feature.group 8.0.1.20230106_0825) is satisfiable
+[INFO] Operation completed in 6937 ms.
+[INFO]
+[INFO] Exec java -ea -Xms512m -Dfile.encoding=UTF-8 -Xmx2000m -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.security.pkcs=ALL-UNNAMED --add-opens=java.base/sun.security.x509=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-modules=ALL-SYSTEM -Dci.mode=true -cp C:\Users\student\.installation\.p2Installer_8\plugins\org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar org.eclipse.core.launcher.Main -application org.eclipse.equinox.p2.director -consolelog -installIU org.talend.studio.lite.ci.product,org.talend.lite.builtin.feature.feature.group,org.talend.lite.branding.feature.feature.group -repository https://update.talend.com/Studio/8/base,https://update.talend.com/Studio/8/updates/R2023-12 -destination C:\Users\student\.installation\.commandline_8 -tag cmdline -profile profile -profileProperties org.eclipse.update.install.features=true -roaming -p2.os win32 -p2.ws win32
+[ERROR] log4j:WARN No appenders could be found for logger (org.apache.http.client.protocol.RequestAddCookies).
+[ERROR] log4j:WARN Please initialize the log4j system properly.
+[ERROR] log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+[INFO] Installing org.talend.studio.lite.ci.product 8.0.1.
+[INFO] Installing org.talend.lite.builtin.feature.feature.group 8.0.1.20231102_0954.
+[INFO] Installing org.talend.lite.branding.feature.feature.group 8.0.1.20211103_1602.
+[INFO] !SESSION 2024-01-29 11:37:48.015 -----------------------------------------------
+[INFO] eclipse.buildId=unknown
+[INFO] java.version=11.0.14
+[INFO] java.vendor=Oracle Corporation
+[INFO] BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+[INFO] Framework arguments:  -application org.eclipse.equinox.p2.director -installIU org.talend.studio.lite.ci.product,org.talend.lite.builtin.feature.feature.group,org.talend.lite.branding.feature.feature.group -repository https://update.talend.com/Studio/8/base,https://update.talend.com/Studio/8/updates/R2023-12 -destination C:\Users\student\.installation\.commandline_8 -tag cmdline -profile profile -profileProperties org.eclipse.update.install.features=true -roaming -p2.os win32 -p2.ws win32
+[INFO] Command-line arguments:  -application org.eclipse.equinox.p2.director -consolelog -installIU org.talend.studio.lite.ci.product,org.talend.lite.builtin.feature.feature.group,org.talend.lite.branding.feature.feature.group -repository https://update.talend.com/Studio/8/base,https://update.talend.com/Studio/8/updates/R2023-12 -destination C:\Users\student\.installation\.commandline_8 -tag cmdline -profile profile -profileProperties org.eclipse.update.install.features=true -roaming -p2.os win32 -p2.ws win32
+[INFO]
+[INFO] !ENTRY org.eclipse.equinox.p2.director 0 0 2024-01-29 11:37:58.609
+[INFO] !MESSAGE Overall install request is satisfiable
+[INFO] !SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2024-01-29 11:37:58.609
+[INFO] !MESSAGE Add request for Talend Studio Lite Branding Feature 8.0.1.20211103_1602 (org.talend.lite.branding.feature.feature.group 8.0.1.20211103_1602) is satisfiable
+[INFO] !SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2024-01-29 11:37:58.609
+[INFO] !MESSAGE Add request for org.talend.studio.lite.ci.product 8.0.1 (org.talend.studio.lite.ci.product 8.0.1) is satisfiable
+[INFO] !SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2024-01-29 11:37:58.609
+[INFO] !MESSAGE Add request for Talend Studio Lite Builtin Feature 8.0.1.20231102_0954 (org.talend.lite.builtin.feature.feature.group 8.0.1.20231102_0954) is satisfiable
+
+[INFO] Resolve .eclipseproduct file...
+[DEBUG] Transfer from: https://update.talend.com/Studio/8/base/.eclipseproduct to: C:\Users\student\.installation\.commandline_8\.eclipseproduct
+[INFO] Resolve license...
+[DEBUG] Transfer from: C:/Talend/8.0.1/license to: C:\Users\student\.installation\.commandline_8\license
+[INFO]
+[INFO] Commandline installation finished.
+[INFO] -----------------------------------------------------
+[INFO]
+[INFO] -----------------------------------------------------
+[INFO] Start to upgrade Commandline...
+[INFO]
+[INFO] Exec java -ea -Xms512m -Dfile.encoding=UTF-8 -Xmx2000m -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.security.pkcs=ALL-UNNAMED --add-opens=java.base/sun.security.x509=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-modules=ALL-SYSTEM -Dmaven.local.repository=C:\Users\student\.m2\repository -Dci.mode=true -Dmaven.repository=global -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/R2023-12 -classpath C:\Users\student\.installation\.commandline_8\plugins\org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar org.eclipse.core.launcher.Main -application org.talend.studiolite.p2.featmanage.UpgradeCommandlineApplication -consolelog -data C:\Users\student\workspace\LOCAL_PROJECT\poms\jobs\process\readme_0.1
+[INFO] !SESSION 2024-01-29 11:42:35.125 -----------------------------------------------
+[INFO] eclipse.buildId=unknown
+[INFO] java.version=11.0.14
+[INFO] java.vendor=Oracle Corporation
+[INFO] BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+[INFO] Framework arguments:  -application org.talend.studiolite.p2.featmanage.UpgradeCommandlineApplication
+[INFO] Command-line arguments:  -application org.talend.studiolite.p2.featmanage.UpgradeCommandlineApplication -consolelog -data C:\Users\student\workspace\LOCAL_PROJECT\poms\jobs\process\readme_0.1
+[INFO]
+[INFO] !ENTRY org.eclipse.emf.ecore 2 0 2024-01-29 11:42:41.031
+[INFO] !MESSAGE Both 'org.talend.designer.unitemap' and 'org.talend.designer.unitemap' register a package for 'http://www.talend.org/unitemap'
+[INFO]
+[INFO] !ENTRY org.eclipse.emf.ecore 2 0 2024-01-29 11:42:41.046
+[INFO] !MESSAGE Both 'org.talend.model' and 'org.talend.model' register a package for 'http://www.talend.org/component_cache'
+[INFO]
+[INFO] !ENTRY org.talend.platform.logging 1 0 2024-01-29 11:42:42.531
+[INFO] !MESSAGE 2024-01-29 11:42:42,515 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Studio base p2 url is overwrited by: -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base
+[INFO]
+[INFO]
+[INFO] !ENTRY org.talend.platform.logging 1 0 2024-01-29 11:42:42.531
+[INFO] !MESSAGE 2024-01-29 11:42:42,531 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Studio update p2 url is overwriten by parameter -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/R2023-12
+[INFO]
+[INFO]
+[INFO] !ENTRY org.talend.platform.logging 1 0 2024-01-29 11:42:46.515
+[INFO] !MESSAGE 2024-01-29 11:42:46,515 INFO  org.talend.studiolite.p2.core.StudioLiteP2Core  - Force profile OS check: -Dtalend.studio.p2.profileOS.check=true
+[INFO]
+[INFO]
+[INFO] !ENTRY org.talend.platform.logging 1 0 2024-01-29 11:42:53.921
+[INFO] !MESSAGE 2024-01-29 11:42:53,921 INFO  org.talend.studiolite.p2.featmanage.app.UpgradeCommandlineApplication  - Installing commandline features: org.talend.studio.tpdsbdrt.feature.feature.group
+[INFO]
+[INFO]
+[INFO] !ENTRY org.talend.platform.logging 1 0 2024-01-29 11:44:44.562
+[INFO] !MESSAGE 2024-01-29 11:44:44,562 INFO  org.talend.studiolite.p2.featmanage.app.UpgradeCommandlineApplication  - Installation succeed!
+[INFO]
+[INFO] Commandline upgrade finished.
+[INFO] -----------------------------------------------------
+[INFO] *****************************************************
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  04:00 min
+[INFO] Finished at: 2024-01-29T11:44:45Z
+[INFO] ------------------------------------------------------------------------
+
+C:\Users\student\workspace\LOCAL_PROJECT\poms\jobs\process\readme_0.1>
+
+
+
+
+
