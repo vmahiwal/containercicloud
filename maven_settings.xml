@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <servers>
+        <!-- credentials to access the default Nexus releases/snapshots repositories -->
+      	<!-- to be used in -DaltdeploymentRepository <id> parameter -->
+        <server>
+            <id>maven-releases</id>
+            <username>admin</username>
+            <password>Talend123</password>
+        </server>
+        <server>
+            <id>maven-snapshots</id>
+            <username>admin</username>
+            <password>Talend123</password>
+        </server>
+        <server>
+            <id>talend-custom-libs-release</id>
+            <username>admin</username>
+            <password>Talend123</password>
+        </server>
+        <server>
+            <id>talend-custom-libs-snapshot</id>
+            <username>admin</username>
+            <password>Talend123</password>
+        </server>
+        <server>
+            <id>maven-public</id>
+            <username>admin</username>
+            <password>Talend123</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>talend-ci</id>
+<!-- Nexus Settings / Credentials --> 
+          	<properties>
+              <nexus_host>http://localhost:8081</nexus_host>
+          	</properties>
+<!-- Nexus Settings / Credentials --> 
+            <repositories>
+                <repository>
+                    <id>central-talend</id>
+                    <name>central-talend</name>
+                    <url>https://talend-update.talend.com/nexus/content/repositories/libraries/</url>
+                    <layout>default</layout>
+                </repository>
+                <repository>
+                    <id>talend.oss.releases</id>
+                    <name>central-talend-oss</name>
+                    <url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease/</url>
+                    <layout>default</layout>
+                </repository>
+                <repository>
+                    <id>central-maven</id>
+                    <name>central-maven</name>
+                    <url>https://repo1.maven.org/maven2/</url>
+                    <layout>default</layout>
+                </repository>
+<!-- For Nexus / JFrog -->
+                <repository>
+                    <id>talend-custom-libs-release</id>
+                    <name>talend-custom-libs-release</name>
+                    <url>${nexus_host}/repository/talend-custom-libs-release/</url>
+                    <layout>default</layout>
+                </repository>
+                <repository>
+                    <id>talend-custom-libs-snapshot</id>
+                    <name>talend-custom-libs-snapshot</name>
+                    <url>${nexus_host}/repository/talend-custom-libs-snapshot/</url>
+                    <layout>default</layout>
+                </repository>
+                <repository>
+                    <id>maven-public</id>
+                    <name>maven-public</name>
+                    <url>${nexus_host}/repository/maven-public/</url>
+                    <layout>default</layout>
+                </repository>
+<!-- For Nexus / JFrog -->
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central-maven</id>
+                    <name>central-maven</name>
+                    <url>https://repo1.maven.org/maven2/</url>
+                    <layout>default</layout>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>talend.oss.releases</id>
+                    <name>central-talend-oss</name>
+                    <url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease/</url>
+                    <layout>default</layout>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>central-talend</id>
+                    <name>central-talend</name>
+                    <url>https://talend-update.talend.com/nexus/content/repositories/libraries/</url>
+                    <layout>default</layout>
+                </pluginRepository>
+<!-- For Nexus / JFrog -->
+                 <pluginRepository>
+                    <id>talend-custom-libs-release</id>
+                    <name>talend-custom-libs-release</name>
+                    <url>${nexus_host}/repository/talend-custom-libs-release/</url>
+                    <layout>default</layout>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>maven-public</id>
+                    <name>maven-public</name>
+                    <url>${nexus_host}/repository/maven-public/</url>
+                    <layout>default</layout>
+              </pluginRepository>
+<!-- For Nexus / JFrog -->
+            </pluginRepositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>talend-ci</activeProfile>
+    </activeProfiles>
+</settings>
