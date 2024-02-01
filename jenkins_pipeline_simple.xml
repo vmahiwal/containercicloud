@@ -1,0 +1,198 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1145.v7f2433caa07f">
+  <actions/>
+  <description>Created via POST</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.33">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.TextParameterDefinition>
+          <name>GIT_PROJECT_LIST</name>
+          <description>Enter the projects to check out, including reference projects to be checked out:
+PROJECTNAME;git_url;git_branch
+REFPROJECT;git_url;git_branch
+These will be checked out to: .repositories/PROJECTNAME/ 
+then PROJECTNAME will be moved to the root of the workspace
+
+The First Project will be used to locate the main pom.xml</description>
+          <defaultValue>CONTAINERCICLOUD;https://github.com/XXXX/containercicloud;main</defaultValue>
+          <trim>false</trim>
+        </hudson.model.TextParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>JOBS_TO_BUILD</name>
+          <description>What job(s) to build, use comma separated list for multiple jobs. 
+Add -amd at the end for ESB services</description>
+          <defaultValue>jobs/process/joindatadb_0.1</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>MVN_GOALS</name>
+          <description>Goals for this build.
+clean package | is to compile only
+clean package -Dmaven.test.skip=true  | same as above but without executing the Test cases
+clean deploy -Pcloud-publisher | package then publish the job to TMC
+clean deploy -DaltDeploymentRepository={Server_ID_From_Settings}::default::{Nexus or Artifactory and repository URL) | package then publish to the specified artifact repository
+clean deploy -Pdocker  | package as docker container and publish to container registry</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>clean package</string>
+              <string>clean package -Dmaven.test.skip=true</string>
+			  <string>clean deploy -Dmaven.test.skip=true -Pcloud-publisher</string>
+              <string>clean deploy -Pcloud-publisher</string>
+              <string>clean deploy -DaltDeploymentRepository=maven-releases::default::http://localhost:8081/repository/maven-releases/</string>
+              <string>clean deploy -Pdocker</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.TextParameterDefinition>
+          <name>TALEND_CI_RUN_CONFIG</name>
+          <description>To define maven parameters to be used by the product exection, such as:
+    - JVM and other configuration
+    - Studio location
+    - debug flags
+will be put to maven mavenOpts
+</description>
+          <defaultValue> -Dlicense.path=license
+ -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base
+ -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/latest
+ -Dorg.slf4j.simpleLogger.showDateTime=true
+ -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS</defaultValue>
+          <trim>false</trim>
+        </hudson.model.TextParameterDefinition>
+        <hudson.model.TextParameterDefinition>
+          <name>TALEND_CI_BUILD_OPTIONS</name>
+          <description>To define maven parameters to be used by Studio,
+will be put to maven options
+-Dtalend.job.context=DEV
+
+TMC / Cloud publisher parameters:
+-Dservice.url=https://tmc.eu.cloud.talend.com/inventory
+-Dcloud.token=$(talend_cloud_token)
+-Dcloud.publisher.screenshot=true 
+-Dcloud.publisher.environment=dev-ci
+-Dcloud.publisher.workspace=ci-ws
+
+Docker Parameters:
+-Dtalend.docker.name=$(docker_image_name)
+-Djkube.docker.push.registry=$(docker_registry)
+-Djkube.docker.username=$(docker_username)
+-Djkube.docker.password=$(docker_password)</description>
+          <defaultValue>-Dtalend.job.applyContextToChildren=true</defaultValue>
+          <trim>false</trim>
+        </hudson.model.TextParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>CI_BUILDER_VERSION</name>
+          <description>To define the CI builder version to use, please make sure this is available in your local .m2 or in one of the pluginRepository specified in settings.xml
+</description>
+          <defaultValue>8.0.4</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GIT_CREDENTIALS_ID</name>
+          <description>The Credentials ID to be used for the GIT checkouts</description>
+          <defaultValue>git_talend</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>MAVEN_SETTINGS_ID</name>
+          <description>The ID of the Maven Settings configured under Managed Files</description>
+          <defaultValue>maven_settings</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>MVN_EXTRA_PARAMS</name>
+          <description>Extra maven flags, like:
+ -X for Debug
+ -U to force Update of all libraries</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string></string>
+              <string>-X -U</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>TALEND_CI_INSTALL_CONFIG</name>
+          <description>Will be used for the first generateAllPoms step only.
+Use -DforceUpdate=true for the reinstall of P2 (if license, settings.xml, is changed, or patch has to be rollbacked)</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string></string>
+              <string> -DforceUpdate=true  -Dinstaller.clean=true </string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>RUN_ON</name>
+          <description>If a node with a specific label should be used for this run</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string></string>
+              <string>linux</string>
+              <string>windows</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2659.v52d3de6044d0">
+    <script>node(env.RUN_ON) {
+
+    maven_settings=env.MAVEN_SETTINGS_ID //The maven settings file to be used as it appears on Manage Jenkins -&gt; Managed Files
+    mavenToUse = &apos;M3&apos; //Maven to be used as it appears on Manage Jenkins -&gt; Global Tool Configuration -&gt; Maven Installations (Name)
+
+    println(&quot;Maven settings: &quot;+ env.MAVEN_SETTINGS_ID)
+
+    env.PROJECT_TO_BUILD=env.GIT_PROJECT_LIST.split(&quot;;&quot;)[0]
+
+    def talend_ci
+    //Takes the groovy script  from configFiles, and loads it to be used:
+    configFileProvider([
+        configFile(fileId:&apos;jenkins_talend_helper&apos;, targetLocation: &apos;jenkins_talend_helper.groovy&apos;)] ) {
+        talend_ci = load &apos;jenkins_talend_helper.groovy&apos;
+    }
+
+    //Takes the talend license from configfiles
+    configFileProvider([
+        configFile(fileId:&apos;license&apos;, targetLocation: &apos;license&apos;)] ) {
+    }
+
+    //Modifies the buildDescription with the parameters
+    talend_ci.checkParameters(true, true)  //printToConsole, updateBuildDescription
+
+
+    def userInput
+    stage(&apos;Initialize&apos;) {
+        //Iterate on the list of projects and check out them under .repositories/PROJECTNAME, 
+        //then copy the PROJECTS to the root of the workspace for reference project
+        talend_ci.checkoutAllProjects(env.GIT_PROJECT_LIST)
+        mvnHome = tool mavenToUse
+    }
+
+    try {
+        stage (&apos;Generate POMS&apos;) {
+            talend_ci.generateAllPoms()
+            talend_ci.displayAvailableJobsToBuild(env.PROJECT_TO_BUILD)
+        }
+
+        stage (&apos;Build&apos;) {
+            talend_ci.buildJobs()
+        } //end Build Stage
+
+
+    } catch (err) {
+        currentBuild.result = &apos;FAILED&apos;
+        talend_ci.displayAvailableJobsToBuild(env.PROJECT_TO_BUILD)
+        throw err
+    }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

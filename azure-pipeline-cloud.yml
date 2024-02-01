@@ -1,0 +1,70 @@
+# Talend CI/CD on Azure DevOps
+# Build Pipeline for building and publishing on Nexus
+
+trigger: none
+pool:
+ vmImage: 'ubuntu-latest'
+
+variables:
+- group: Talend Variables
+- name: project_name
+  value: 'AZUREPIPELINE'
+#Define it as a Variable in the GUI so it can be overriden at runtime
+#- name: jobs_to_build
+#  value: 'jobs/process/directory/job_directory_clean_1.0'
+
+- name: talend_ci_config
+  value: >-
+    -DforceUpdate=true
+    -Dlicense.path=$(license.secureFilePath)
+    -Dtalend.studio.p2.base=$(p2_base_url)
+    -Dtalend.studio.p2.update=$(p2_update_url)
+    -Pcloud-publisher
+    -Dcloud.publisher.screenshot=true
+    -Dservice.url=$(CLOUD_URL)
+    -Dcloud.token=$(CLOUD_TOKEN)
+    -Dcloud.publisher.environment=default 
+    -Dcloud.publisher.workspace=Personal
+
+steps:
+  - task: DownloadSecureFile@1
+    name: settings_xml
+    inputs:
+      secureFile: settings.xml
+
+  - task: DownloadSecureFile@1
+    name: license
+    inputs:
+      secureFile: license
+
+  - task: DownloadSecureFile@1
+    name: pom_xml
+    inputs:
+      secureFile: sample_pom.xml
+
+
+#mvn install:install-file -Dfile=./8.0.1/builder-maven-plugin-8.0.1.jar -DpomFile=./8.0.1/builder-maven-plugin-8.0.1.pom
+  
+#      mavenPomFile: '$(Build.Repository.LocalPath)/$(project_name)/poms/pom.xml'
+# mavenPomFile: '$(pom_xml.secureFilePath)'
+  - task: Maven@3
+    displayName: 'Maven Install P2 and generate Poms'
+    inputs:
+      mavenPomFile: '$(pom_xml.secureFilePath)'
+      goals: 'org.talend.ci:builder-maven-plugin:8.0.4:generateAllPoms' 
+      options: '--batch-mode --settings $(settings_xml.secureFilePath) $(talend_ci_config)'
+      publishJUnitResults: false
+
+  - task: CmdLine@2
+    displayName: 'List the modules / available jobs to be built'
+    inputs:
+      script: |
+        pwd
+        cat $(project_name)/poms/pom.xml | sed '/<modules>/,/<\/modules>/!d'
+
+  - task: Maven@3
+    displayName: 'Maven Build & Publish Talend jobs'
+    inputs:
+        mavenPomFile: '$(project_name)/poms/pom.xml'
+        goals: 'deploy' #compile / deploy
+        options: '--batch-mode --settings $(settings_xml.secureFilePath) -pl $(jobs_to_build) -am -fae $(talend_ci_config)'
