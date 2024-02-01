@@ -1,3 +1,6 @@
+Commands
+
+C:\Users\student\workspace>mvn -X org.talend.ci:builder-maven-plugin:8.0.12:generateAllPoms  -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/R2023-12 -Dlicense.path="C:/Talend/8.0.1/license"
 
 
 mvn -X org.talend.ci:builder-maven-plugin:8.0.12:install -Dtalend.studio.p2.base=https://update.talend.com/Studio/8/base -Dtalend.studio.p2.update=https://update.talend.com/Studio/8/updates/R2023-12 -Dlicense.path=C:/Talend/license/lic_trbd.txt
